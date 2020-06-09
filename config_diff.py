@@ -4,6 +4,9 @@ commands during two stages `pre-change`,`post-change` and produces HTML diff fil
 highlighting the differences in command output.
 Required access to network devices and uses Netmiko to connect to device and 
 execute command.
+
+Supported platforms:
+Tested platforms:
 """
 
 import argparse
@@ -30,8 +33,6 @@ class CustomParser(argparse.ArgumentParser):
     """
     Overrides default CLI parser's print_help and error methods
     """
-    # Print default help from argparse.ArgumentParser class
-    super().print_help()
     # Print our help message
     def print_help(self):
         print(
@@ -40,7 +41,7 @@ class CustomParser(argparse.ArgumentParser):
             + "\n               change_diff.py -c post-change -dl <device_file.yaml\n"
             + "\n Usage example: To compute difference"
             + "\n                change_diff.py -dl <device_file>.yaml -d\n"
-            + "\n Device information in device file should be in the following format and stored with a .yaml extention:"
+            + "\n Device information should be in the following format and stored with a .yaml extention:"
             + "\n                - hostname: Router1"
             + "\n                  ip: 192.168.1.191"
             + "\n                  os: cisco_ios"
@@ -192,8 +193,7 @@ def compute_diff(device_list):
     Compare text string in 'pre-change' with 'post-change' and produce
     formatted HTML table to be written to a file.
 
-    :param diff: List that diff is being executed for
-    :param device_list: contains device IP addresses, type and commands to execute
+    :param device_list: contains device IP addresses, type and commands
     """
     error = "False"
     # loops through list of devices

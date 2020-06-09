@@ -1,0 +1,5 @@
+Interface                  IP-Address      OK? Method Status                Protocol
+FastEthernet0/0            192.168.1.191   YES NVRAM  up                    up      
+FastEthernet1/0            10.10.14.1      YES NVRAM  up                    up      
+FastEthernet2/0            20.20.12.1      YES NVRAM  up                    up
+FastEthernet3/0            30.30.32.9      YES NVRAM  up                    up

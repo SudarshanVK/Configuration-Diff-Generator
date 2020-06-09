@@ -45,13 +45,13 @@ The `-d` diff mode execution compares the difference in command output between `
 
 ## Sample Output
 ### -c or --change execution mode
-![alt text](images/Capture_Execution_mode.png)
+![alt text](images/change_mode.png)
 
 ### -d or --diff execution mode
-![alt text](images/Diff_Execution_mode.png)
+![alt text](images/diff_mode.png)
 
 ### Sample dif output
-![alt text](images/Diff_html.png)
+![alt text](images/diff.png)
 
 ## Author
 Sudarshan Vijaya Kumar

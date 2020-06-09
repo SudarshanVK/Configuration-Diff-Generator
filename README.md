@@ -4,14 +4,14 @@ This tool helps to collect output of specified commands during two stages `pre-c
 Example:
 ```
 python config_diff.py -h
-python config_diff.py --change post-change -device-list device.yaml
+python config_diff.py --capture post-change -device-list device.yaml
 python config_diff.py -c pre-change -dl device.yaml
 python config-diff.py -dl device.yaml -d
 ```
 
 This tool has two execution modes:
 
-* `-c` or `--change`: collection of data where it executes specified commands against network devices and stores the command output in files.
+* `-c` or `--capture`: collection of data where it executes specified commands against network devices and stores the command output in files.
 * `-d` or `--diff`: computational of difference between command output captured during pre-change and post-change stages.
 
 The details of network node and commands are provided in a `yaml` file as illustrated below.
@@ -44,13 +44,13 @@ Specified commands are executed against network nodes and the output is saved in
 The `-d` diff mode execution compares the difference in command output between `post-change` and `pre-change` and produces HTML diff files and stores it in a dedicated diff folder. If either a `post-change` or 'pre-change` capture is missing, the program warns the user. Similarly if a diff already exists, a warning is displayed and the program exits.
 
 ## Sample Output
-### -c or --change execution mode
-![alt text](images/change_mode.png)
+### -c or --capture - execution mode
+![alt text](images/capture_mode.png)
 
-### -d or --diff execution mode
+### -d or --diff - execution mode
 ![alt text](images/diff_mode.png)
 
-### Sample dif output
+### Sample diff output
 ![alt text](images/diff.png)
 
 ## Author

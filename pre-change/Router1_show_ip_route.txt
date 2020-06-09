@@ -10,11 +10,19 @@ Gateway of last resort is not set
 
       1.0.0.0/32 is subnetted, 1 subnets
 C        1.1.1.10 is directly connected, Loopback1
-      10.0.0.0/8 is variably subnetted, 4 subnets, 2 masks
+      2.0.0.0/32 is subnetted, 1 subnets
+B        2.2.2.20 [20/0] via 10.10.12.2, 00:42:04
+      3.0.0.0/32 is subnetted, 1 subnets
+B        3.3.3.3 [20/0] via 10.10.12.2, 00:40:30
+      4.0.0.0/32 is subnetted, 1 subnets
+B        4.4.4.4 [20/0] via 10.10.14.4, 00:41:56
+      10.0.0.0/8 is variably subnetted, 6 subnets, 2 masks
 C        10.10.12.0/24 is directly connected, FastEthernet2/0
 L        10.10.12.1/32 is directly connected, FastEthernet2/0
 C        10.10.14.0/24 is directly connected, FastEthernet1/0
 L        10.10.14.1/32 is directly connected, FastEthernet1/0
+B        10.10.23.0/24 [20/0] via 10.10.12.2, 00:42:04
+B        10.10.34.0/24 [20/0] via 10.10.14.4, 00:41:56
       192.168.1.0/24 is variably subnetted, 2 subnets, 2 masks
 C        192.168.1.0/24 is directly connected, FastEthernet0/0
 L        192.168.1.191/32 is directly connected, FastEthernet0/0

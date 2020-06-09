@@ -37,7 +37,7 @@ class CustomParser(argparse.ArgumentParser):
     def print_help(self):
         print(
             "\n Usage examples: To capture command output"
-            + "\n               change_diff.py --change pre-change --device-list <device_file>.yaml"
+            + "\n               change_diff.py --capture pre-change --device-list <device_file>.yaml"
             + "\n               change_diff.py -c post-change -dl <device_file.yaml\n"
             + "\n Usage example: To compute difference"
             + "\n                change_diff.py -dl <device_file>.yaml -d\n"
@@ -65,7 +65,7 @@ def parse_args():
     group = parser.add_mutually_exclusive_group(required=True)
     group.add_argument(
         "-c",
-        "--change",
+        "--capture",
         help="Capture window {pre-change or post-change}",
         choices=["pre-change", "post-change"],
     )
@@ -85,18 +85,18 @@ def parse_args():
 
 
 # Function to execute command on device and wite to file.
-def execute_command_write_to_file(change_window, device_list, uname, pword):
+def execute_command_write_to_file(capture_window, device_list, uname, pword):
     """
     Executes IOS commands using Netmiko.
     Writes raw output to a report file.
 
-    :param change_window: pre-change or post-change capture
+    :param capture_window: pre-change or post-change capture
     :param device_list: contains device IP addresses, type and commands to execute
     :param uname: Username used to authenticate to device
     :param pword: Password used to authenticate to device
     """
     # loops through list of devices
-    error = "Flase"
+    error = "False"
     for device in device_list:
         # defines a hostname paramater used later while computing the file name
         hostname = device["hostname"]
@@ -156,8 +156,8 @@ def execute_command_write_to_file(change_window, device_list, uname, pword):
                 filename = hostname + "_" + re.sub("\s", "_", command)
                 # print (filename)
                 # set path of the file that will be created.
-                # dependes on the change_window paramater
-                file = os.path.join(change_window, filename + ".txt")
+                # dependes on the capture_window paramater
+                file = os.path.join(capture_window, filename + ".txt")
                 # print (file)
                 # Execute the command on device and write output to file
                 try:
@@ -249,7 +249,7 @@ def main():
     # print (option.change)
     # print (option.device_list)
     # print (option.diff)
-    change_window = option.change
+    capture_window = option.capture
 
     # reads the device list yaml file into device_list
     with open(option.device_list, "r") as device_list:
@@ -257,21 +257,19 @@ def main():
     # print(device_list)
 
     # Checks if execution is to capture output
-    if change_window != None:
-        # get username and password input from user
-        username = input("Username: ")
-        password = getpass.getpass("Password: ")
-        # creates a folder for change window if it does not exist
+    if capture_window != None:
+
+        # creates a folder for capture window if it does not exist
         # If it does, warns user and exits script
         try:
-            os.makedirs(change_window)
+            os.makedirs(capture_window)
         except OSError as e:
             print(
                 Fore.RED
                 + "*" * 50
                 + "\n"
-                + "A {} capture already exists \n".format(option.change)
-                + "Delete the `{}` folder to re-capture \n".format(option.change)
+                + "A {} capture already exists \n".format(option.capture)
+                + "Delete the `{}` folder to re-capture \n".format(option.capture)
                 + "*" * 50
                 + "\n"
             )
@@ -280,14 +278,18 @@ def main():
         print(
             Fore.GREEN
             + "*" * 50
-            + "\n"
-            + "Capture Window set to : {} \n".format(change_window)
+            + "\n Executing in Capture mode"
+            + "\n Capture Window set to : {} \n".format(capture_window)
             + "*" * 50
             + "\n"
         )
 
+        # get username and password input from user
+        username = input("Username: ")
+        password = getpass.getpass("Password: ")
+        print ("\n")
         # Execute command and write to file
-        error = execute_command_write_to_file(change_window, device_list, username, password)
+        error = execute_command_write_to_file(capture_window, device_list, username, password)
 
     # check if execution is to get difference
     if option.diff:
@@ -298,14 +300,21 @@ def main():
         except OSError as e:
             print(
                 Fore.RED
-                + "*" * 50
                 + "\n"
-                + "A configuration Diff already exists \n"
-                + "Delete the `Diff` folder to re-capture \n"
                 + "*" * 50
-                + "\n"
+                + "\n A configuration Diff already exists"
+                + "\n Delete the `Diff` folder to re-capture\n"
+                + "*" * 50
             )
             sys.exit(2)
+
+        print(
+            Fore.GREEN
+            + "\n"
+            + "*" * 50
+            + "\n Executing in Diff mode\n"
+            + "*" * 50
+        )
 
         # compares differences between command output and generates HTML files 
         # highlighting the diferences
@@ -315,20 +324,18 @@ def main():
     if error == "True":
         print(
             Fore.YELLOW
-            + "*" * 50
             + "\n"
-            + "Execution completed with errors\n"
             + "*" * 50
-            + "\n"
+            + "\n Execution completed with errors \n"
+            + "*" * 50
         )
     elif error == "False":
         print(
             Fore.GREEN
-            + "*" * 50
             + "\n"
-            + "Execution completed with no errors\n"
             + "*" * 50
-            + "\n"
+            + "\n Execution completed with no errors \n"
+            + "*" * 50
         )
 
 

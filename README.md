@@ -32,7 +32,7 @@ The details of network node and commands are provided in a `yaml` file as illust
 ```
 
 The `os` field refers to the Netmiko supported device types.
-Supported device_types can be found in [ssh_dispatcher.py][https://github.com/ktbyers/netmiko/blob/master/netmiko/ssh_dispatcher.py], see CLASS_MAPPER keys.
+Supported device_types can be found in [ssh_dispatcher.py](https://github.com/ktbyers/netmiko/blob/master/netmiko/ssh_dispatcher.py), see CLASS_MAPPER keys.
 
 ## How it works
 

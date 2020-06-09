@@ -48,7 +48,7 @@ The `-d` diff mode execution compares the difference in command output between `
 ![alt text](images/Capture_Execution_mode.png)
 
 ### -d or --diff execution mode
-![alt text](images/Diff_Execution_mode.png)
+
 
 ### Sample dif output
 ![alt text](images/Diff_html.png)

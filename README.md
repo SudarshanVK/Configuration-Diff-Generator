@@ -40,7 +40,7 @@ Supported device_types can be found in [ssh_dispatcher.py](https://github.com/kt
 
 The script uses netmiko to connect to devices and execute commands. It will prompt the user to enter the `Username` and `Password` used to authenticate to the network deivice during execution.
 
-The `-c` collection execution mode has two options `pre-change` and `post-change`. For each of these options a dedicated folder is created to store the results. If either of the captures already exist, the program warns the user and exits.
+The `-c` capture execution mode has two options `pre-change` and `post-change`. For each of these options a dedicated folder is created to store the results. If either of the captures already exist, the program warns the user and exits.
 Specified commands are executed against network nodes and the output is saved in files.
 
 The `-d` diff mode execution compares the difference in command output between `post-change` and `pre-change` and produces HTML diff files and stores it in a dedicated diff folder. If either a `post-change` or 'pre-change` capture is missing, the program warns the user. Similarly if a diff already exists, a warning is displayed and the program exits.

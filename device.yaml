@@ -1,15 +1,22 @@
-- hostname: Router1
-  ip: 192.168.1.191
-  os: cisco_ios
-  command_list:
-    - show ip interface brief
-    - sh ip bgp summary
-    - show ip route
+# - hostname: Router1
+#   ip: 192.168.1.191
+#   os: cisco_ios
+#   command_list:
+#     - show ip interface brief
+#     - sh ip bgp summary
+#     - show ip route
 
-- hostname: Router2
-  ip: 192.168.1.192
-  os: cisco_ios
+# - hostname: Router2
+#   ip: 192.168.1.192
+#   os: cisco_ios
+#   command_list:
+#     - show ip interface brief
+#     - show ip bgp summary
+#     - sh ip route
+
+- hostname: HASwitch
+  ip: 10.70.99.16
+  os: juniper_junos
   command_list:
-    - show ip interface brief
-    - show ip bgp summary
-    - sh ip route
+    - show interfaces descriptions
+    - show route

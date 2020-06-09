@@ -1,0 +1,6 @@
+ 
+Interface       Admin Link Description
+ge-0/0/0        up    down MAXHAFW001 HA1 connection
+ge-0/0/1        up    down MAXHAFW001 HA2 connection
+ge-0/0/2        up    down Temporary Link to NexusA port 48 for STP testing
+ge-0/0/3        up    down Temporary Link to NexusB port 48for STP testing

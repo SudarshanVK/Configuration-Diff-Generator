@@ -10,8 +10,9 @@ python config-diff.py -dl device.yaml -d
 ```
 
 This tool has two execution modes:
-`-c` : collection of data where it executes specified commands against network devices and stores the command output in files.
-`-d` : computational of difference between command output captured during pre-change and post-change stages.
+
+* `-c` or `--change`: collection of data where it executes specified commands against network devices and stores the command output in files.
+* `-d` or `--diff`: computational of difference between command output captured during pre-change and post-change stages.
 
 The details of network node and commands are provided in a `yaml` file as illustrated below.
 ```
@@ -24,11 +25,14 @@ The details of network node and commands are provided in a `yaml` file as illust
 
 - hostname: Router2
   ip: 192.168.1.192
-  os: cisco_ios
+  os: juniper_junos
   command_list:
     - sh ip route
     - sh ip ospf neighbors
 ```
+
+The `os` field refers to the Netmiko supported device types.
+Supported device_types can be found in ssh_dispatcher.py[https://github.com/ktbyers/netmiko/blob/master/netmiko/ssh_dispatcher.py], see CLASS_MAPPER keys.
 
 ## How it works
 
@@ -39,5 +43,15 @@ Specified commands are executed against network nodes and the output is saved in
 
 The `-d` diff mode execution compares the difference in command output between `post-change` and `pre-change` and produces HTML diff files and stores it in a dedicated diff folder. If either a `post-change` or 'pre-change` capture is missing, the program warns the user. Similarly if a diff already exists, a warning is displayed and the program exits.
 
+## Sample Output
+### -c or --change execution mode
+![alt text](images/Capture_Execution_mode.png)
 
+### -d or --diff execution mode
+![alt text](images/Diff_Execution_mode.png)
 
+### Sample dif output
+![alt text](images/Diff_html.png)
+
+## Author
+Sudarshan Vijaya Kumar

@@ -1,0 +1,39 @@
+{
+    "version": {
+        "version_short": "15.0",
+        "platform": "7200",
+        "version": "15.0(1)M",
+        "image_id": "C7200-ADVIPSERVICESK9-M",
+        "os": "IOS",
+        "image_type": "production image",
+        "compiled_date": "Wed 30-Sep-09 07:48",
+        "compiled_by": "prod_rel_team",
+        "rom": "ROMMON Emulation Microcode",
+        "bootldr": "7200 Software (C7200-ADVIPSERVICESK9-M), Version 15.0(1)M, RELEASE SOFTWARE (fc2)",
+        "hostname": "CiscoRTR",
+        "uptime": "16 hours, 13 minutes",
+        "system_image": "tftp://255.255.255.255/unknown",
+        "chassis": "7206VXR",
+        "main_mem": "491520",
+        "processor_type": "NPE400",
+        "rtr_type": "7206VXR",
+        "chassis_sn": "4279256517",
+        "last_reload_reason": "power-on",
+        "number_of_intfs": {
+            "Ethernet": "8",
+            "FastEthernet": "1"
+        },
+        "processor_board_flash": "8192K",
+        "disks": {
+            "slot 0 (Sector size 512 bytes).": {
+                "disk_size": "131072",
+                "type_of_disk": "ATA PCMCIA card"
+            },
+            "slot 1 (Sector size 512 bytes).": {
+                "disk_size": "131072",
+                "type_of_disk": "ATA PCMCIA card"
+            }
+        },
+        "curr_config_register": "0x2102"
+    }
+}

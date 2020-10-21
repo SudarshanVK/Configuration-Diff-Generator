@@ -11,8 +11,8 @@ sudo pip install -e .
 
 # Usage
 The applicaiton has two execution modes:   
-* **capture**: Used to capture command output and save files.   
-* **diff**: Used to compute diff between command output that was captured earlier.   
+*  **capture**: Used to capture command output and save files.   
+*  **diff**: Used to compute diff between command output that was captured earlier.   
 Example:
 ```
 run --help
@@ -28,8 +28,8 @@ Commands:
 
 ## Capture Mode
 The capture mode accepts two arguments   
-* **-w**: A string value that defines the capture window (eg: Pre-change)   
-* **-i**: Inventory file that contains the list of devices and commands to execute. rever to [device.yaml](device.yaml) for example.   
+*  **-w**: A string value that defines the capture window (eg: Pre-change)   
+*  **-i**: Inventory file that contains the list of devices and commands to execute. rever to [device.yaml](device.yaml) for example.   
 Example
 ```
 run capture [OPTIONS]
@@ -44,8 +44,8 @@ Options:
 
 ## Diff mode
 The diff mode accepts two arguments   
-* **-w1**: The first capture window against which the diff is to be generated.   
-* **-w2**: The second capture window against which the diff is to be generated.   
+*  **-w1**: The first capture window against which the diff is to be generated.   
+*  **-w2**: The second capture window against which the diff is to be generated.   
 Example
 ```
 run diff --help

@@ -11,8 +11,8 @@ sudo pip install -e .
 
 # Usage
 The applicaiton has two execution modes:   
-*  __capture__: Used to capture command output and save files.   
-*  __diff__: Used to compute diff between command output that was captured earlier.   
+* __capture__: Used to capture command output and save files.   
+* __diff__: Used to compute diff between command output that was captured earlier.   
 Example:
 ```
 run --help
@@ -28,8 +28,8 @@ Commands:
 
 ### Capture Mode
 The capture mode accepts two arguments:   
-* __-w__: A string value that defines the capture window (eg: Pre-change)   
-*  __-i__: Inventory file that contains the list of devices and commands to execute. rever to [device.yaml](device.yaml) for example.   
+* **-w**: A string value that defines the capture window (eg: Pre-change)   
+* **-i**: Inventory file that contains the list of devices and commands to execute. rever to [device.yaml](device.yaml) for example.   
 Example
 ```
 run capture [OPTIONS]
@@ -44,8 +44,8 @@ Options:
 
 ### Diff mode
 The diff mode accepts two arguments:   
-* __-w1__: The first capture window against which the diff is to be generated.   
-* __-w2__: The second capture window against which the diff is to be generated.   
+* **-w1**: The first capture window against which the diff is to be generated.   
+* **-w2**: The second capture window against which the diff is to be generated.   
 Example
 ```
 run diff --help
@@ -61,9 +61,9 @@ Options:
 
 # How it works
 
-In __Capture mode__, the application will prompt for the `username` and `passowrd` used to login to the deivces. The command output is stored in a dedicated folder that is created with the capture window parameter that was passed. If a capture already exists for the window, the application will warn and terminate. In the event that the application was not able to execute a particular command on a device, a warning is displayed on screen but the application does not terminate. The applicaiton also tries to parse the output using [genie](https://developer.cisco.com/docs/genie-docs/) and if successsful a json output of the command is stored. If unsuccessful, the output is stores as a text file.
+In **Capture mode**, the application will prompt for the `username` and `password` used to login to the deivces. The command output is stored in a dedicated folder that is created with the capture window parameter that was passed. If a capture already exists for the window, the application will warn and terminate. In the event that the application was not able to execute a particular command on a device, a warning is displayed on screen but the application does not terminate. The applicaiton also tries to parse the output using [genie](https://developer.cisco.com/docs/genie-docs/) and if successsful a json output of the command is stored. If unsuccessful, the output is stores as a text file.
 
-In __Diff mode__, the application generates HTML diff for command output in the provided capture window.It looks for any captures that are present in one window and not the other and a warning is displayed on screen for those. The results are saved in a dedicated folder that is created.
+In **Diff mode**, the application generates HTML diff for command output in the provided capture window.It looks for any captures that are present in one window and not the other and a warning is displayed on screen for those. The results are saved in a dedicated folder that is created.
 
 # Sample Output
 ### Capture mode
@@ -77,7 +77,7 @@ In __Diff mode__, the application generates HTML diff for command output in the 
 
 ## Supported Vendors
 The script uses netmiko to connect to devices and execute commands.
-Supported `device_types` can be found [here.](https://github.com/ktbyers/netmiko/blob/master/netmiko/ssh_dispatcher.py), see CLASS_MAPPER keys.
+Supported `device_types` can be found [here.](https://github.com/ktbyers/netmiko/blob/master/netmiko/ssh_dispatcher.py) see CLASS_MAPPER keys.
 
 
 ## Author

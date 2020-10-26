@@ -1,7 +1,7 @@
 [![Python 3](https://img.shields.io/badge/python-3.6%20%7C%203.7%20%7C%203.8-blue)](https://www.python.org/downloads/)
 
 # Configuration Diff Generator
-This tool helps to collect output of specified commands during defined capture windows and produces HTML diff files highlighting the differences in command output.
+This tool helps to collect the output of specified commands during defined capture windows and produces HTML diff files highlighting the differences in the command output.
 
 # Installation
 Execute the following command to install the tool. It is highly recommended that this is done in a dedicated virtual environment.
@@ -10,7 +10,7 @@ sudo pip install -e .
 ```
 
 # Usage
-The applicaiton has two execution modes:   
+The application has two execution modes:   
 * __capture__: Used to capture command output and save files.   
 * __diff__: Used to compute diff between command output that was captured earlier.   
 Example:

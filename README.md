@@ -1,4 +1,5 @@
 [![Python 3](https://img.shields.io/badge/python-3.6%20%7C%203.7%20%7C%203.8-blue)](https://www.python.org/downloads/)
+[![published](https://static.production.devnetcloud.com/codeexchange/assets/images/devnet-published.svg)](https://developer.cisco.com/codeexchange/github/repo/SudarshanVK/Configuration_Diff_Generator)
 
 # Configuration Diff Generator
 This tool helps to collect the output of specified commands during defined capture windows and produces HTML diff files highlighting the differences in the command output.

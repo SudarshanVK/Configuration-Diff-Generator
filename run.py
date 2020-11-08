@@ -221,7 +221,7 @@ def compute_diff(dir1, dir2, diff_dir):
                 + "Diff computation will be skipped"
             )
     # Find captures that were missed in the first window and display on screen
-    # cd2 = list(set(dir2_entries) - set(dir1_entries))
+    cd2 = list(set(dir2_entries) - set(dir1_entries))
     if len(cd2) != 0:
         for item in cd2:
             print(

@@ -1,0 +1,404 @@
+<?xml version="1.0"?>
+<config version="9.0.0" urldb="paloaltonetworks">
+  <mgt-config>
+    <users/>
+    <password-complexity>
+      <enabled>yes</enabled>
+      <minimum-length>8</minimum-length>
+    </password-complexity>
+  </mgt-config>
+  <shared>
+    <application/>
+    <application-group/>
+    <service/>
+    <service-group/>
+    <botnet>
+      <configuration>
+        <http>
+          <dynamic-dns>
+            <enabled>yes</enabled>
+            <threshold>5</threshold>
+          </dynamic-dns>
+          <malware-sites>
+            <enabled>yes</enabled>
+            <threshold>5</threshold>
+          </malware-sites>
+          <recent-domains>
+            <enabled>yes</enabled>
+            <threshold>5</threshold>
+          </recent-domains>
+          <ip-domains>
+            <enabled>yes</enabled>
+            <threshold>10</threshold>
+          </ip-domains>
+          <executables-from-unknown-sites>
+            <enabled>yes</enabled>
+            <threshold>5</threshold>
+          </executables-from-unknown-sites>
+        </http>
+        <other-applications>
+          <irc>yes</irc>
+        </other-applications>
+        <unknown-applications>
+          <unknown-tcp>
+            <destinations-per-hour>10</destinations-per-hour>
+            <sessions-per-hour>10</sessions-per-hour>
+            <session-length>
+              <maximum-bytes>100</maximum-bytes>
+              <minimum-bytes>50</minimum-bytes>
+            </session-length>
+          </unknown-tcp>
+          <unknown-udp>
+            <destinations-per-hour>10</destinations-per-hour>
+            <sessions-per-hour>10</sessions-per-hour>
+            <session-length>
+              <maximum-bytes>100</maximum-bytes>
+              <minimum-bytes>50</minimum-bytes>
+            </session-length>
+          </unknown-udp>
+        </unknown-applications>
+      </configuration>
+      <report>
+        <topn>100</topn>
+        <scheduled>yes</scheduled>
+      </report>
+    </botnet>
+    <content-preview>
+      <application-type>
+        <category>
+          <entry name="saas" id="6">
+            <subcategory>
+              <entry name="vertical-industry" id="32"/>
+              <entry name="marketing" id="33"/>
+              <entry name="hr" id="34"/>
+              <entry name="erp" id="35"/>
+              <entry name="it-infrastructure" id="36"/>
+              <entry name="sales" id="37"/>
+              <entry name="development" id="38"/>
+              <entry name="commerce" id="39"/>
+              <entry name="security" id="40"/>
+              <entry name="customer-service" id="41"/>
+              <entry name="it-management" id="42"/>
+              <entry name="content-management" id="43"/>
+              <entry name="collaboration-productivity" id="44"/>
+              <entry name="office" id="45"/>
+              <entry name="analytics" id="46"/>
+              <entry name="digital-advertising" id="47"/>
+              <entry name="design" id="48"/>
+              <entry name="supply-chain-logistics" id="49"/>
+              <entry name="hosting" id="50"/>
+              <entry name="artificial-intelligence" id="51"/>
+              <entry name="cad-plm" id="52"/>
+              <entry name="governance-risk-compliance" id="53"/>
+              <entry name="iot-management" id="54"/>
+              <entry name="b2b-marketplace-platforms" id="55"/>
+              <entry name="ar-vr" id="56"/>
+              <entry name="data-privacy" id="57"/>
+            </subcategory>
+          </entry>
+        </category>
+        <technology/>
+      </application-type>
+      <application/>
+    </content-preview>
+  </shared>
+  <devices>
+    <entry name="localhost.localdomain">
+      <network>
+        <interface>
+          <ethernet/>
+          <loopback>
+            <units/>
+          </loopback>
+          <vlan>
+            <units/>
+          </vlan>
+          <tunnel>
+            <units/>
+          </tunnel>
+        </interface>
+        <vlan/>
+        <virtual-wire/>
+        <profiles>
+          <monitor-profile>
+            <entry name="default">
+              <interval>3</interval>
+              <threshold>5</threshold>
+              <action>wait-recover</action>
+            </entry>
+          </monitor-profile>
+        </profiles>
+        <ike>
+          <crypto-profiles>
+            <ike-crypto-profiles>
+              <entry name="default">
+                <encryption>
+                  <member>aes-128-cbc</member>
+                  <member>3des</member>
+                </encryption>
+                <hash>
+                  <member>sha1</member>
+                </hash>
+                <dh-group>
+                  <member>group2</member>
+                </dh-group>
+                <lifetime>
+                  <hours>8</hours>
+                </lifetime>
+              </entry>
+              <entry name="Suite-B-GCM-128">
+                <encryption>
+                  <member>aes-128-cbc</member>
+                </encryption>
+                <hash>
+                  <member>sha256</member>
+                </hash>
+                <dh-group>
+                  <member>group19</member>
+                </dh-group>
+                <lifetime>
+                  <hours>8</hours>
+                </lifetime>
+              </entry>
+              <entry name="Suite-B-GCM-256">
+                <encryption>
+                  <member>aes-256-cbc</member>
+                </encryption>
+                <hash>
+                  <member>sha384</member>
+                </hash>
+                <dh-group>
+                  <member>group20</member>
+                </dh-group>
+                <lifetime>
+                  <hours>8</hours>
+                </lifetime>
+              </entry>
+            </ike-crypto-profiles>
+            <ipsec-crypto-profiles>
+              <entry name="default">
+                <esp>
+                  <encryption>
+                    <member>aes-128-cbc</member>
+                    <member>3des</member>
+                  </encryption>
+                  <authentication>
+                    <member>sha1</member>
+                  </authentication>
+                </esp>
+                <dh-group>group2</dh-group>
+                <lifetime>
+                  <hours>1</hours>
+                </lifetime>
+              </entry>
+              <entry name="Suite-B-GCM-128">
+                <esp>
+                  <encryption>
+                    <member>aes-128-gcm</member>
+                  </encryption>
+                  <authentication>
+                    <member>none</member>
+                  </authentication>
+                </esp>
+                <dh-group>group19</dh-group>
+                <lifetime>
+                  <hours>1</hours>
+                </lifetime>
+              </entry>
+              <entry name="Suite-B-GCM-256">
+                <esp>
+                  <encryption>
+                    <member>aes-256-gcm</member>
+                  </encryption>
+                  <authentication>
+                    <member>none</member>
+                  </authentication>
+                </esp>
+                <dh-group>group20</dh-group>
+                <lifetime>
+                  <hours>1</hours>
+                </lifetime>
+              </entry>
+            </ipsec-crypto-profiles>
+            <global-protect-app-crypto-profiles>
+              <entry name="default">
+                <encryption>
+                  <member>aes-128-cbc</member>
+                </encryption>
+                <authentication>
+                  <member>sha1</member>
+                </authentication>
+              </entry>
+            </global-protect-app-crypto-profiles>
+          </crypto-profiles>
+          <gateway/>
+        </ike>
+        <qos>
+          <profile>
+            <entry name="default">
+              <class>
+                <entry name="class1">
+                  <priority>real-time</priority>
+                </entry>
+                <entry name="class2">
+                  <priority>high</priority>
+                </entry>
+                <entry name="class3">
+                  <priority>high</priority>
+                </entry>
+                <entry name="class4">
+                  <priority>medium</priority>
+                </entry>
+                <entry name="class5">
+                  <priority>medium</priority>
+                </entry>
+                <entry name="class6">
+                  <priority>low</priority>
+                </entry>
+                <entry name="class7">
+                  <priority>low</priority>
+                </entry>
+                <entry name="class8">
+                  <priority>low</priority>
+                </entry>
+              </class>
+            </entry>
+          </profile>
+        </qos>
+        <virtual-router>
+          <entry name="default">
+            <protocol>
+              <bgp>
+                <enable>no</enable>
+                <dampening-profile>
+                  <entry name="default">
+                    <cutoff>1.25</cutoff>
+                    <reuse>0.5</reuse>
+                    <max-hold-time>900</max-hold-time>
+                    <decay-half-life-reachable>300</decay-half-life-reachable>
+                    <decay-half-life-unreachable>900</decay-half-life-unreachable>
+                    <enable>yes</enable>
+                  </entry>
+                </dampening-profile>
+              </bgp>
+            </protocol>
+          </entry>
+        </virtual-router>
+        <tunnel>
+          <ipsec/>
+          <global-protect-gateway/>
+          <global-protect-site-to-site/>
+        </tunnel>
+      </network>
+      <deviceconfig>
+        <system>
+          <ip-address>10.99.114.61</ip-address>
+          <netmask>255.255.255.0</netmask>
+          <update-schedule/>
+          <service>
+            <disable-telnet>yes</disable-telnet>
+            <disable-http>yes</disable-http>
+          </service>
+          <hostname>9100DMZF01-New</hostname>
+          <panorama-server>10.99.114.50</panorama-server>
+          <type>
+            <static/>
+          </type>
+          <default-gateway>10.99.114.1</default-gateway>
+          <permitted-ip>
+            <entry name="10.0.0.0/8"/>
+            <entry name="172.16.0.0/22"/>
+          </permitted-ip>
+          <ntp-servers/>
+        </system>
+        <setting>
+          <management>
+            <hostname-type-in-syslog>FQDN</hostname-type-in-syslog>
+          </management>
+          <jumbo-frame>
+            <mtu>9216</mtu>
+          </jumbo-frame>
+        </setting>
+        <high-availability>
+          <interface>
+            <ha1>
+              <port>ha1-a</port>
+              <ip-address>192.168.1.1</ip-address>
+              <netmask>255.255.255.252</netmask>
+            </ha1>
+            <ha1-backup>
+              <port>ha1-b</port>
+              <ip-address>192.168.2.1</ip-address>
+              <netmask>255.255.255.252</netmask>
+            </ha1-backup>
+            <ha2>
+              <port>ethernet1/11</port>
+            </ha2>
+            <ha2-backup>
+              <port>ethernet1/12</port>
+            </ha2-backup>
+            <ha3/>
+          </interface>
+          <group>
+            <group-id>10</group-id>
+            <description>DMZ Firewall HA</description>
+            <peer-ip>192.168.1.2</peer-ip>
+            <peer-ip-backup>192.168.2.2</peer-ip-backup>
+            <mode>
+              <active-passive>
+                <passive-link-state>auto</passive-link-state>
+              </active-passive>
+            </mode>
+            <monitoring>
+              <link-monitoring>
+                <link-group>
+                  <entry name="AGG TO DMZ - AE1">
+                    <interface>
+                      <member>ethernet1/13</member>
+                      <member>ethernet1/14</member>
+                    </interface>
+                    <enabled>yes</enabled>
+                    <failure-condition>all</failure-condition>
+                  </entry>
+                  <entry name="AGG TO CORE - AE2">
+                    <interface>
+                      <member>ethernet1/15</member>
+                      <member>ethernet1/16</member>
+                    </interface>
+                    <enabled>yes</enabled>
+                    <failure-condition>all</failure-condition>
+                  </entry>
+                  <entry name="AGG TO INTR - AE3">
+                    <interface>
+                      <member>ethernet1/17</member>
+                      <member>ethernet1/18</member>
+                    </interface>
+                    <enabled>yes</enabled>
+                    <failure-condition>all</failure-condition>
+                  </entry>
+                </link-group>
+                <enabled>yes</enabled>
+              </link-monitoring>
+            </monitoring>
+          </group>
+          <enabled>yes</enabled>
+        </high-availability>
+      </deviceconfig>
+      <vsys>
+        <entry name="vsys1">
+          <application/>
+          <application-group/>
+          <zone/>
+          <service/>
+          <service-group/>
+          <schedule/>
+          <rulebase>
+            <security>
+              <rules/>
+            </security>
+          </rulebase>
+        </entry>
+      </vsys>
+    </entry>
+  </devices>
+</config>

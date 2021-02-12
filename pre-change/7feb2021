@@ -1,0 +1,539 @@
+<?xml version="1.0"?>
+<config urldb="paloaltonetworks" version="8.1.0">
+  <mgt-config>
+    <users>
+      <entry name="admin">
+        <phash>$1$mkkjkcuv$BIlOs1ioNwYQmJey3Bg3m1</phash>
+        <permissions>
+          <role-based>
+            <superuser>yes</superuser>
+          </role-based>
+        </permissions>
+      </entry>
+    </users>
+  </mgt-config>
+  <shared>
+    <application/>
+    <application-group/>
+    <service/>
+    <service-group/>
+    <botnet>
+      <configuration>
+        <http>
+          <dynamic-dns>
+            <enabled>yes</enabled>
+            <threshold>5</threshold>
+          </dynamic-dns>
+          <malware-sites>
+            <enabled>yes</enabled>
+            <threshold>5</threshold>
+          </malware-sites>
+          <recent-domains>
+            <enabled>yes</enabled>
+            <threshold>5</threshold>
+          </recent-domains>
+          <ip-domains>
+            <enabled>yes</enabled>
+            <threshold>10</threshold>
+          </ip-domains>
+          <executables-from-unknown-sites>
+            <enabled>yes</enabled>
+            <threshold>5</threshold>
+          </executables-from-unknown-sites>
+        </http>
+        <other-applications>
+          <irc>yes</irc>
+        </other-applications>
+        <unknown-applications>
+          <unknown-tcp>
+            <destinations-per-hour>10</destinations-per-hour>
+            <sessions-per-hour>10</sessions-per-hour>
+            <session-length>
+              <maximum-bytes>100</maximum-bytes>
+              <minimum-bytes>50</minimum-bytes>
+            </session-length>
+          </unknown-tcp>
+          <unknown-udp>
+            <destinations-per-hour>10</destinations-per-hour>
+            <sessions-per-hour>10</sessions-per-hour>
+            <session-length>
+              <maximum-bytes>100</maximum-bytes>
+              <minimum-bytes>50</minimum-bytes>
+            </session-length>
+          </unknown-udp>
+        </unknown-applications>
+      </configuration>
+      <report>
+        <topn>100</topn>
+        <scheduled>yes</scheduled>
+      </report>
+    </botnet>
+    <content-preview>
+      <application-type>
+        <technology/>
+        <category>
+          <entry name="saas" id="6">
+            <subcategory>
+              <entry name="vertical-industry" id="32"/>
+              <entry name="marketing" id="33"/>
+              <entry name="hr" id="34"/>
+              <entry name="erp" id="35"/>
+              <entry name="it-infrastructure" id="36"/>
+              <entry name="sales" id="37"/>
+              <entry name="development" id="38"/>
+              <entry name="commerce" id="39"/>
+              <entry name="security" id="40"/>
+              <entry name="customer-service" id="41"/>
+              <entry name="it-management" id="42"/>
+              <entry name="content-management" id="43"/>
+              <entry name="collaboration-productivity" id="44"/>
+              <entry name="office" id="45"/>
+              <entry name="analytics" id="46"/>
+              <entry name="digital-advertising" id="47"/>
+              <entry name="design" id="48"/>
+              <entry name="supply-chain-logistics" id="49"/>
+              <entry name="hosting" id="50"/>
+              <entry name="artificial-intelligence" id="51"/>
+              <entry name="cad-plm" id="52"/>
+              <entry name="governance-risk-compliance" id="53"/>
+              <entry name="iot-management" id="54"/>
+              <entry name="b2b-marketplace-platforms" id="55"/>
+              <entry name="ar-vr" id="56"/>
+              <entry name="data-privacy" id="57"/>
+            </subcategory>
+          </entry>
+        </category>
+      </application-type>
+      <application/>
+    </content-preview>
+    <certificate/>
+    <ssl-tls-service-profile/>
+    <authentication-profile>
+      <entry name="hello">
+        <multi-factor-auth>
+          <mfa-enable>no</mfa-enable>
+        </multi-factor-auth>
+        <method>
+          <none/>
+        </method>
+        <allow-list>
+          <member>all</member>
+        </allow-list>
+      </entry>
+    </authentication-profile>
+    <reports>
+      <entry name="GLOBALPROTECT_USERS_Details">
+        <type>
+          <trsum>
+            <aggregate-by>
+              <member>hour-of-receive_time</member>
+              <member>src</member>
+              <member>srcuser</member>
+              <member>dst</member>
+              <member>app</member>
+            </aggregate-by>
+            <values>
+              <member>bytes</member>
+              <member>sessions</member>
+            </values>
+          </trsum>
+        </type>
+        <period>last-calendar-day</period>
+        <topn>5000</topn>
+        <topm>50</topm>
+        <caption>GLOBALPROTECT_USERS_Details</caption>
+        <query>addr.src in 172.16.0.0/22 and (addr.dst notin 10.99.39.10 and addr.dst notin 10.99.39.11 and addr.dst notin 10.99.39.12 and addr.dst notin 10.99.39.13)</query>
+      </entry>
+      <entry name="GLOBALPROTECT_USERS_Cnt">
+        <type>
+          <trsum>
+            <aggregate-by>
+              <member>src</member>
+              <member>srcuser</member>
+            </aggregate-by>
+            <values>
+              <member>bytes</member>
+              <member>sessions</member>
+            </values>
+          </trsum>
+        </type>
+        <period>last-calendar-day</period>
+        <topn>5000</topn>
+        <topm>10</topm>
+        <caption>GLOBALPROTECT_USERS_Cnt</caption>
+        <query>addr.src in 172.16.0.0/22</query>
+      </entry>
+      <entry name="SCCM_GPOnly_Total">
+        <type>
+          <traffic>
+            <aggregate-by>
+              <member>hour-of-receive_time</member>
+            </aggregate-by>
+            <values>
+              <member>bytes</member>
+            </values>
+          </traffic>
+        </type>
+        <period>last-24-hrs</period>
+        <topn>100</topn>
+        <topm>10</topm>
+        <caption>SCCM_GPOnly_Total</caption>
+        <query>(addr in 10.99.39.59 or addr in 10.99.39.58 or addr in 10.99.118.220 or addr in 10.99.39.53) and addr in 172.16.0.0/22</query>
+      </entry>
+      <entry name="SCCM_GPOnly_User">
+        <type>
+          <traffic>
+            <sortby>bytes</sortby>
+            <aggregate-by>
+              <member>srcuser</member>
+            </aggregate-by>
+            <values>
+              <member>bytes</member>
+            </values>
+          </traffic>
+        </type>
+        <period>last-24-hrs</period>
+        <topn>100</topn>
+        <topm>10</topm>
+        <caption>SCCM_GPOnly_User</caption>
+        <query>(addr in 10.99.39.59 or addr in 10.99.39.58 or addr in 10.99.118.220 or addr in 10.99.39.53) and addr in 172.16.0.0/22</query>
+      </entry>
+      <entry name="SCCM_Total">
+        <type>
+          <traffic>
+            <aggregate-by>
+              <member>hour-of-receive_time</member>
+            </aggregate-by>
+            <values>
+              <member>bytes</member>
+            </values>
+          </traffic>
+        </type>
+        <period>last-24-hrs</period>
+        <topn>100</topn>
+        <topm>10</topm>
+        <caption>SCCM_Total</caption>
+        <query>(addr in 10.99.39.59 or addr in 10.99.39.58 or addr in 10.99.118.220 or addr in 10.99.39.53) and addr in 172.16.0.0/22</query>
+      </entry>
+    </reports>
+    <report-group/>
+    <email-scheduler/>
+  </shared>
+  <devices>
+    <entry name="localhost.localdomain">
+      <network>
+        <interface>
+          <ethernet/>
+          <loopback>
+            <units/>
+          </loopback>
+          <vlan>
+            <units/>
+          </vlan>
+          <tunnel>
+            <units/>
+          </tunnel>
+          <aggregate-ethernet/>
+        </interface>
+        <vlan/>
+        <virtual-wire/>
+        <profiles>
+          <monitor-profile>
+            <entry name="default">
+              <interval>3</interval>
+              <threshold>5</threshold>
+              <action>wait-recover</action>
+            </entry>
+          </monitor-profile>
+        </profiles>
+        <ike>
+          <crypto-profiles>
+            <ike-crypto-profiles>
+              <entry name="default">
+                <encryption>
+                  <member>aes-128-cbc</member>
+                  <member>3des</member>
+                </encryption>
+                <hash>
+                  <member>sha1</member>
+                </hash>
+                <dh-group>
+                  <member>group2</member>
+                </dh-group>
+                <lifetime>
+                  <hours>8</hours>
+                </lifetime>
+              </entry>
+              <entry name="Suite-B-GCM-128">
+                <encryption>
+                  <member>aes-128-cbc</member>
+                </encryption>
+                <hash>
+                  <member>sha256</member>
+                </hash>
+                <dh-group>
+                  <member>group19</member>
+                </dh-group>
+                <lifetime>
+                  <hours>8</hours>
+                </lifetime>
+              </entry>
+              <entry name="Suite-B-GCM-256">
+                <encryption>
+                  <member>aes-256-cbc</member>
+                </encryption>
+                <hash>
+                  <member>sha384</member>
+                </hash>
+                <dh-group>
+                  <member>group20</member>
+                </dh-group>
+                <lifetime>
+                  <hours>8</hours>
+                </lifetime>
+              </entry>
+            </ike-crypto-profiles>
+            <ipsec-crypto-profiles>
+              <entry name="default">
+                <esp>
+                  <encryption>
+                    <member>aes-128-cbc</member>
+                    <member>3des</member>
+                  </encryption>
+                  <authentication>
+                    <member>sha1</member>
+                  </authentication>
+                </esp>
+                <dh-group>group2</dh-group>
+                <lifetime>
+                  <hours>1</hours>
+                </lifetime>
+              </entry>
+              <entry name="Suite-B-GCM-128">
+                <esp>
+                  <encryption>
+                    <member>aes-128-gcm</member>
+                  </encryption>
+                  <authentication>
+                    <member>none</member>
+                  </authentication>
+                </esp>
+                <dh-group>group19</dh-group>
+                <lifetime>
+                  <hours>1</hours>
+                </lifetime>
+              </entry>
+              <entry name="Suite-B-GCM-256">
+                <esp>
+                  <encryption>
+                    <member>aes-256-gcm</member>
+                  </encryption>
+                  <authentication>
+                    <member>none</member>
+                  </authentication>
+                </esp>
+                <dh-group>group20</dh-group>
+                <lifetime>
+                  <hours>1</hours>
+                </lifetime>
+              </entry>
+            </ipsec-crypto-profiles>
+            <global-protect-app-crypto-profiles>
+              <entry name="default">
+                <encryption>
+                  <member>aes-128-cbc</member>
+                </encryption>
+                <authentication>
+                  <member>sha1</member>
+                </authentication>
+              </entry>
+            </global-protect-app-crypto-profiles>
+          </crypto-profiles>
+          <gateway/>
+        </ike>
+        <qos>
+          <profile>
+            <entry name="default">
+              <class>
+                <entry name="class1">
+                  <priority>real-time</priority>
+                </entry>
+                <entry name="class2">
+                  <priority>high</priority>
+                </entry>
+                <entry name="class3">
+                  <priority>high</priority>
+                </entry>
+                <entry name="class4">
+                  <priority>medium</priority>
+                </entry>
+                <entry name="class5">
+                  <priority>medium</priority>
+                </entry>
+                <entry name="class6">
+                  <priority>low</priority>
+                </entry>
+                <entry name="class7">
+                  <priority>low</priority>
+                </entry>
+                <entry name="class8">
+                  <priority>low</priority>
+                </entry>
+              </class>
+            </entry>
+          </profile>
+        </qos>
+        <virtual-router/>
+        <tunnel>
+          <ipsec/>
+          <global-protect-gateway/>
+          <global-protect-site-to-site/>
+        </tunnel>
+      </network>
+      <deviceconfig>
+        <system>
+          <motd-and-banner>
+            <banner-header>INTF01</banner-header>
+            <banner-header-color>color10</banner-header-color>
+          </motd-and-banner>
+          <ip-address>10.99.114.63</ip-address>
+          <netmask>255.255.255.0</netmask>
+          <service>
+            <disable-telnet>yes</disable-telnet>
+            <disable-http>yes</disable-http>
+          </service>
+          <hostname>PA-8509999</hostname>
+          <default-gateway>10.99.114.1</default-gateway>
+          <panorama-server>10.99.51.99</panorama-server>
+          <snmp-setting>
+            <access-setting>
+              <version>
+                <v2c>
+                  <snmp-community-string>Ey351ghT</snmp-community-string>
+                </v2c>
+              </version>
+            </access-setting>
+            <snmp-system>
+              <send-event-specific-traps>yes</send-event-specific-traps>
+            </snmp-system>
+          </snmp-setting>
+          <panorama-server-2>10.99.114.50</panorama-server-2>
+        </system>
+        <setting>
+          <management>
+            <hostname-type-in-syslog>FQDN</hostname-type-in-syslog>
+            <quota-settings>
+              <disk-quota>
+                <alarm>3</alarm>
+                <appstat>4</appstat>
+                <trsum>7</trsum>
+                <thsum>2</thsum>
+                <hipmatch>3</hipmatch>
+                <dlp-logs>1</dlp-logs>
+                <application-pcaps>1</application-pcaps>
+                <debug-filter-pcaps>1</debug-filter-pcaps>
+                <hip-reports>1</hip-reports>
+                <traffic>30</traffic>
+                <threat>16</threat>
+                <config>4</config>
+                <system>4</system>
+              </disk-quota>
+            </quota-settings>
+          </management>
+        </setting>
+        <high-availability>
+          <interface>
+            <ha1>
+              <netmask>255.255.255.0</netmask>
+              <ip-address>192.168.5.3</ip-address>
+            </ha1>
+            <ha1-backup>
+              <ip-address>192.168.6.3</ip-address>
+              <netmask>255.255.255.0</netmask>
+              <port>ethernet1/4</port>
+            </ha1-backup>
+            <ha2/>
+            <ha2-backup/>
+            <ha3/>
+          </interface>
+          <group>
+            <group-id>3</group-id>
+            <configuration-synchronization>
+              <enabled>yes</enabled>
+            </configuration-synchronization>
+            <mode>
+              <active-passive>
+                <passive-link-state>auto</passive-link-state>
+              </active-passive>
+            </mode>
+            <peer-ip>192.168.5.4</peer-ip>
+            <peer-ip-backup>192.168.6.4</peer-ip-backup>
+            <election-option>
+              <device-priority>10</device-priority>
+              <heartbeat-backup>yes</heartbeat-backup>
+              <timers>
+                <recommended/>
+              </timers>
+            </election-option>
+            <monitoring>
+              <link-monitoring>
+                <link-group>
+                  <entry name="Link to Internet Border">
+                    <interface>
+                      <member>ethernet1/3</member>
+                    </interface>
+                  </entry>
+                  <entry name="LAG to DMZ Switches">
+                    <interface>
+                      <member>ethernet1/1</member>
+                      <member>ethernet1/2</member>
+                    </interface>
+                  </entry>
+                </link-group>
+              </link-monitoring>
+            </monitoring>
+          </group>
+          <enabled>yes</enabled>
+        </high-availability>
+      </deviceconfig>
+      <vsys>
+        <entry name="vsys1">
+          <application/>
+          <application-group/>
+          <zone>
+            <entry name="TAP Zone">
+              <network>
+                <tap/>
+              </network>
+              <enable-user-identification>yes</enable-user-identification>
+            </entry>
+          </zone>
+          <service/>
+          <service-group/>
+          <schedule/>
+          <rulebase>
+            <security>
+              <rules/>
+            </security>
+            <pbf>
+              <rules/>
+            </pbf>
+          </rulebase>
+          <import>
+            <network>
+              <interface/>
+            </network>
+          </import>
+          <log-settings>
+            <profiles/>
+          </log-settings>
+          <global-protect>
+            <global-protect-gateway/>
+          </global-protect>
+          <address/>
+          <address-group/>
+        </entry>
+      </vsys>
+    </entry>
+  </devices>
+</config>

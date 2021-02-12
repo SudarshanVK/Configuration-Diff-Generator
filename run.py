@@ -172,7 +172,7 @@ def execute_command_write_to_file(capture_window, device_list, uname, pword):
                 # Execute the command on device and parse the output through
                 # Genie if there is a parser for it.
                 output = remote_conn.send_command(
-                    command, use_genie=True, cmd_verify=True
+                    command, cmd_verify=True
                 )
                 # print (output)
                 # Error executing command for cisco ios
@@ -186,16 +186,8 @@ def execute_command_write_to_file(capture_window, device_list, uname, pword):
                     print(f"    => Command: '{command}'")
                     # try writing the contents to a text file. If the command is
                     # not parsed this will be successful
-                    try:
-                        with open(file + ".txt", "w") as f:
-                            f.write(output)
-                    # if commands were parsed, write the output to a .json file
-                    # as structured data
-                    except:
-                        os.remove(file + ".txt")
-                        output_json = json.dumps(output, indent=4)
-                        with open(file + ".json", "w") as f:
-                            f.write(output_json)
+                    with open(file + ".txt", "w") as f:
+                        f.write(output)
 
 
 def compute_diff(dir1, dir2, diff_dir):

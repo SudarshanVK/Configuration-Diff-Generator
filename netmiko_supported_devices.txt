@@ -1,0 +1,97 @@
+"""Controls selection of proper class based on the device type."""
+from netmiko.a10 import A10SSH
+from netmiko.accedian import AccedianSSH
+from netmiko.adtran import AdtranOSSSH
+from netmiko.alcatel import AlcatelAosSSH
+from netmiko.arista import AristaSSH, AristaTelnet
+from netmiko.arista import AristaFileTransfer
+from netmiko.apresia import ApresiaAeosSSH, ApresiaAeosTelnet
+from netmiko.aruba import ArubaSSH
+from netmiko.broadcom import BroadcomIcosSSH
+from netmiko.calix import CalixB6SSH, CalixB6Telnet
+from netmiko.centec import CentecOSSSH, CentecOSTelnet
+from netmiko.checkpoint import CheckPointGaiaSSH
+from netmiko.ciena import CienaSaosSSH, CienaSaosTelnet, CienaSaosFileTransfer
+from netmiko.cisco import CiscoAsaSSH, CiscoAsaFileTransfer
+from netmiko.cisco import CiscoFtdSSH
+from netmiko.cisco import (
+    CiscoIosSSH,
+    CiscoIosFileTransfer,
+    CiscoIosTelnet,
+    CiscoIosSerial,
+)
+from netmiko.cisco import CiscoNxosSSH, CiscoNxosFileTransfer
+from netmiko.cisco import CiscoS300SSH
+from netmiko.cisco import CiscoTpTcCeSSH
+from netmiko.cisco import CiscoWlcSSH
+from netmiko.cisco import CiscoXrSSH, CiscoXrTelnet, CiscoXrFileTransfer
+from netmiko.citrix import NetscalerSSH
+from netmiko.cloudgenix import CloudGenixIonSSH
+from netmiko.coriant import CoriantSSH
+from netmiko.dell import DellDNOS6SSH
+from netmiko.dell import DellDNOS6Telnet
+from netmiko.dell import DellForce10SSH
+from netmiko.dell import DellOS10SSH, DellOS10FileTransfer
+from netmiko.dell import DellPowerConnectSSH
+from netmiko.dell import DellPowerConnectTelnet
+from netmiko.dell import DellIsilonSSH
+from netmiko.dlink import DlinkDSTelnet, DlinkDSSSH
+from netmiko.eltex import EltexSSH, EltexEsrSSH
+from netmiko.endace import EndaceSSH
+from netmiko.enterasys import EnterasysSSH
+from netmiko.extreme import ExtremeErsSSH
+from netmiko.extreme import ExtremeExosSSH
+from netmiko.extreme import ExtremeExosTelnet
+from netmiko.extreme import ExtremeNetironSSH
+from netmiko.extreme import ExtremeNetironTelnet
+from netmiko.extreme import ExtremeNosSSH
+from netmiko.extreme import ExtremeSlxSSH
+from netmiko.extreme import ExtremeVspSSH
+from netmiko.extreme import ExtremeWingSSH
+from netmiko.f5 import F5TmshSSH
+from netmiko.f5 import F5LinuxSSH
+from netmiko.flexvnf import FlexvnfSSH
+from netmiko.fortinet import FortinetSSH
+from netmiko.hp import HPProcurveSSH, HPProcurveTelnet, HPComwareSSH, HPComwareTelnet
+from netmiko.huawei import HuaweiSSH, HuaweiVrpv8SSH, HuaweiTelnet
+from netmiko.huawei import HuaweiSmartAXSSH
+from netmiko.ipinfusion import IpInfusionOcNOSSSH, IpInfusionOcNOSTelnet
+from netmiko.juniper import JuniperSSH, JuniperTelnet, JuniperScreenOsSSH
+from netmiko.juniper import JuniperFileTransfer
+from netmiko.keymile import KeymileSSH, KeymileNOSSSH
+from netmiko.linux import LinuxSSH, LinuxFileTransfer
+from netmiko.mikrotik import MikrotikRouterOsSSH
+from netmiko.mikrotik import MikrotikSwitchOsSSH
+from netmiko.mellanox import MellanoxMlnxosSSH
+from netmiko.mrv import MrvLxSSH
+from netmiko.mrv import MrvOptiswitchSSH
+from netmiko.netapp import NetAppcDotSSH
+from netmiko.nokia import NokiaSrosSSH, NokiaSrosFileTransfer
+from netmiko.netgear import NetgearProSafeSSH
+from netmiko.oneaccess import OneaccessOneOSTelnet, OneaccessOneOSSSH
+from netmiko.ovs import OvsLinuxSSH
+from netmiko.paloalto import PaloAltoPanosSSH
+from netmiko.paloalto import PaloAltoPanosTelnet
+from netmiko.pluribus import PluribusSSH
+from netmiko.quanta import QuantaMeshSSH
+from netmiko.rad import RadETXSSH
+from netmiko.rad import RadETXTelnet
+from netmiko.raisecom import RaisecomRoapSSH
+from netmiko.raisecom import RaisecomRoapTelnet
+from netmiko.ruckus import RuckusFastironSSH
+from netmiko.ruckus import RuckusFastironTelnet
+from netmiko.ruijie import RuijieOSSSH, RuijieOSTelnet
+from netmiko.sixwind import SixwindOSSSH
+from netmiko.sophos import SophosSfosSSH
+from netmiko.terminal_server import TerminalServerSSH
+from netmiko.terminal_server import TerminalServerTelnet
+from netmiko.tplink import TPLinkJetStreamSSH, TPLinkJetStreamTelnet
+from netmiko.ubiquiti import UbiquitiEdgeRouterSSH
+from netmiko.ubiquiti import UbiquitiEdgeSSH
+from netmiko.ubiquiti import UbiquitiUnifiSwitchSSH
+from netmiko.vyos import VyOSSSH
+from netmiko.watchguard import WatchguardFirewareSSH
+from netmiko.yamaha import YamahaSSH
+from netmiko.yamaha import YamahaTelnet
+from netmiko.zte import ZteZxrosSSH
+from netmiko.zte import ZteZxrosTelnet

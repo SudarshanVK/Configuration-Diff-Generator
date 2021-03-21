@@ -1,0 +1,17 @@
+- hostname: AristaSW
+  ip: 192.168.1.198
+  os: arista_eos
+  username: cisco
+  password: cisco123
+  command_list:
+    - show 
+    - show version
+
+- hostname: CiscoRTR
+  ip: 192.168.1.195
+  os: cisco_ios
+  username: cisco
+  password: cisco123
+  command_list:
+    - show version
+    - show ip route 

@@ -2,19 +2,25 @@
 [![published](https://static.production.devnetcloud.com/codeexchange/assets/images/devnet-published.svg)](https://developer.cisco.com/codeexchange/github/repo/SudarshanVK/Configuration_Diff_Generator)
 
 # Configuration Diff Generator
+
 This tool helps to collect the output of specified commands during defined capture windows and produces HTML diff files highlighting the differences in the command output.
 
 # Installation
+
 Execute the following command to install the tool. It is highly recommended that this is done in a dedicated virtual environment.
+
 ```
 sudo pip install -e .
 ```
 
 # Usage
-The application has two execution modes:   
-* __capture__: Used to capture command output and save files.   
-* __diff__: Used to compute diff between command output that was captured earlier.   
-Example:
+
+The application has two execution modes:
+
+* __capture__: Used to capture command output and save files.
+* __diff__: Used to compute diff between command output that was captured earlier.
+  Example:
+
 ```
 run --help
 Usage: run [OPTIONS] COMMAND [ARGS]...
@@ -28,10 +34,13 @@ Commands:
 ```
 
 ### Capture Mode
-The capture mode accepts two arguments:   
-* **-w**: A string value that defines the capture window (eg: Pre-change)   
-* **-i**: Inventory file that contains the list of devices and commands to execute. rever to [device.yaml](device.yaml) for example.   
-Example
+
+The capture mode accepts two arguments:
+
+* **-w**: A string value that defines the capture window (eg: Pre-change)
+* **-i**: Inventory file that contains the list of devices and commands to execute. rever to [sample_device.yaml](device.yaml) for example.
+  Example
+
 ```
 run capture [OPTIONS]
 
@@ -44,10 +53,13 @@ Options:
 ```
 
 ### Diff mode
-The diff mode accepts two arguments:   
-* **-w1**: The first capture window against which the diff is to be generated.   
-* **-w2**: The second capture window against which the diff is to be generated.   
-Example
+
+The diff mode accepts two arguments:
+
+* **-w1**: The first capture window against which the diff is to be generated.
+* **-w2**: The second capture window against which the diff is to be generated.
+  Example
+
 ```
 run diff --help
 Usage: run diff [OPTIONS]
@@ -67,19 +79,24 @@ In **Capture mode**, the application will prompt for the `username` and `passwor
 In **Diff mode**, the application generates HTML diff for command output in the provided capture window.It looks for any captures that are present in one window and not the other and a warning is displayed on screen for those. The results are saved in a dedicated folder that is created.
 
 # Sample Output
+
 ### Capture mode
+
 ![alt text](images/capture_mode.png)
 
 ### Diff mode
+
 ![alt text](images/diff_mode.png)
 
 ### Sample diff output
+
 ![alt text](images/diff.png)
 
 ## Supported Vendors
+
 The script uses netmiko to connect to devices and execute commands.
 Supported `device_types` can be found [here.](https://github.com/ktbyers/netmiko/blob/master/netmiko/ssh_dispatcher.py) see CLASS_MAPPER keys.
 
-
 ## Author
+
 Sudarshan Vijaya Kumar

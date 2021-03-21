@@ -9,8 +9,8 @@ setup(
         'netmiko',
         'colorama',
         'PyYAML',
-        'genie',
-        'pyats'
+        # 'genie',
+        # 'pyats'
     ],
     entry_points='''
         [console_scripts]

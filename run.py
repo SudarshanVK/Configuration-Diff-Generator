@@ -56,10 +56,10 @@ def capture(w, i):
 
     print(Fore.GREEN + f" ====>Capture Window Set to: {w}")
 
-    print(Fore.YELLOW + "   ==> Enter device Credientials:")
-    username = input(Fore.YELLOW + "    => Username: ")
-    password = getpass.getpass(Fore.YELLOW + "    => Password: ")
-    execute_command_write_to_file(w, device_list, username, password)
+    # print(Fore.YELLOW + "   ==> Enter device Credientials:")
+    # username = input(Fore.YELLOW + "    => Username: ")
+    # password = getpass.getpass(Fore.YELLOW + "    => Password: ")
+    execute_command_write_to_file(w, device_list)
 
 
 # Specify the two options that are needed to run in Diff mode
@@ -103,7 +103,7 @@ def diff(w1, w2):
 
 
 # Function to execute command on device and wite to file.
-def execute_command_write_to_file(capture_window, device_list, uname, pword):
+def execute_command_write_to_file(capture_window, device_list):
     """
     Executes IOS commands using Netmiko.
     Writes raw output to a report file.
@@ -122,8 +122,8 @@ def execute_command_write_to_file(capture_window, device_list, uname, pword):
         a_device = {
             "device_type": device["os"],
             "host": device["ip"],
-            "username": uname,
-            "password": pword,
+            "username": device["username"],
+            "password": device["password"],
         }
         # Try to connect to device and raise exception if unsuccessful
         # and exit program

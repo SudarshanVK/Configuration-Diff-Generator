@@ -2,7 +2,7 @@
 build
 dist
 __pycache__
-env
+*env
 netmiko_supported_devices
 *device*
 #exception to *device*

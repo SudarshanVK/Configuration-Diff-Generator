@@ -74,7 +74,7 @@ Options:
 
 # How it works
 
-In **Capture mode**, the application will prompt for the `username` and `password` used to login to the deivces. The command output is stored in a dedicated folder that is created with the capture window parameter that was passed. If a capture already exists for the window, the application will warn and terminate. In the event that the application was not able to execute a particular command on a device, a warning is displayed on screen but the application does not terminate. The applicaiton also tries to parse the output using [genie](https://developer.cisco.com/docs/genie-docs/) and if successsful a json output of the command is stored. If unsuccessful, the output is stores as a text file.
+In **Capture mode**, the application will prompt for the `username` and `password` used to login to the deivces. The command output is stored in a dedicated folder that is created with the capture window parameter that was passed. If a capture already exists for the window, the application will warn and terminate. In the event that the application was not able to execute a particular command on a device, a warning is displayed on screen but the application does not terminate. 
 
 In **Diff mode**, the application generates HTML diff for command output in the provided capture window.It looks for any captures that are present in one window and not the other and a warning is displayed on screen for those. The results are saved in a dedicated folder that is created.
 

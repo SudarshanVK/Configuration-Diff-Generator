@@ -84,12 +84,13 @@ In **Diff mode**, the application generates HTML diff for command output in the 
 
 ![alt text](images/capture_mode.png)
 
-### Sample diff output![alt text](images/diff_mode.png)
+### Sample diff output
 
+![alt text](images/diff_mode.png)
 
 ![alt text](images/diff.png)
 
-## Supported Vendors
+#### Supported Vendors
 
 The script uses netmiko to connect to devices and execute commands.
 Supported `device_types` can be found [here.](https://github.com/ktbyers/netmiko/blob/master/netmiko/ssh_dispatcher.py) see CLASS_MAPPER keys.
@@ -106,6 +107,6 @@ Some of the commonly used device types and os to be used are as below:
 | Arista | arista_eos |
 | Palo Alto FW | paloalto_panos |
 
-## Authors
+#### Authors
 
 Sudarshan Vijaya Kumar

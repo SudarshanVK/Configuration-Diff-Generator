@@ -38,7 +38,7 @@ Commands:
 The capture mode accepts two arguments:
 
 * **-w**: A string value that defines the capture window (eg: Pre-change)
-* **-i**: Inventory file that contains the list of devices and commands to execute. rever to [sample_device.yaml](device.yaml) for example.
+* **-i**: Inventory file that contains the list of devices and commands to execute. rever to [sample_device.yaml](sample_device.yaml) for example.
   Example
 
 ```

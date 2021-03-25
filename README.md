@@ -105,4 +105,6 @@ Some of the commonly used device types and os to be used are as below:
 | Arista | arista_eos |
 | Palo Alto FW | paloalto_panos |
 
+## Authors
+
 Sudarshan Vijaya Kumar

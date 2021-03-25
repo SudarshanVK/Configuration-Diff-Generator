@@ -86,9 +86,8 @@ In **Diff mode**, the application generates HTML diff for command output in the 
 
 ### Sample diff output![alt text](images/diff_mode.png)
 
+
 ![alt text](images/diff.png)
-
-
 
 ## Supported Vendors
 

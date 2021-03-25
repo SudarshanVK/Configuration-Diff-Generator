@@ -120,7 +120,7 @@ def execute_command_write_to_file(capture_window, device_list):
         print(Fore.GREEN + "  ===> Processing Host: {} ".format(hostname))
         # Defines Netmiko connection parameters
         a_device = {
-            "device_type": device["os"],
+            "device_type": device["device_type"],
             "host": device["ip"],
             "username": device["username"],
             "password": device["password"],

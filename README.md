@@ -10,7 +10,7 @@ This tool helps to collect the output of specified commands during defined captu
 Execute the following command to install the tool. It is highly recommended that this is done in a dedicated virtual environment.
 
 ```
-sudo pip install -e .
+pip install -r requirements.txt
 ```
 
 # Usage
@@ -74,7 +74,7 @@ Options:
 
 # How it works
 
-In **Capture mode**, the application will prompt for the `username` and `password` used to login to the deivces. The command output is stored in a dedicated folder that is created with the capture window parameter that was passed. If a capture already exists for the window, the application will warn and terminate. In the event that the application was not able to execute a particular command on a device, a warning is displayed on screen but the application does not terminate. 
+In **Capture mode**, the application will prompt for the `username` and `password` used to login to the deivces. The command output is stored in a dedicated folder that is created with the capture window parameter that was passed. If a capture already exists for the window, the application will warn and terminate. In the event that the application was not able to execute a particular command on a device, a warning is displayed on screen but the application does not terminate.
 
 In **Diff mode**, the application generates HTML diff for command output in the provided capture window.It looks for any captures that are present in one window and not the other and a warning is displayed on screen for those. The results are saved in a dedicated folder that is created.
 
@@ -84,11 +84,7 @@ In **Diff mode**, the application generates HTML diff for command output in the 
 
 ![alt text](images/capture_mode.png)
 
-### Diff mode
-
-![alt text](images/diff_mode.png)
-
-### Sample diff output
+### Sample diff output![alt text](images/diff_mode.png)
 
 ![alt text](images/diff.png)
 
@@ -97,6 +93,16 @@ In **Diff mode**, the application generates HTML diff for command output in the 
 The script uses netmiko to connect to devices and execute commands.
 Supported `device_types` can be found [here.](https://github.com/ktbyers/netmiko/blob/master/netmiko/ssh_dispatcher.py) see CLASS_MAPPER keys.
 
-## Author
+Some of the commonly used device types and os to be used are as below:
+
+
+| Vendor | device_type |
+| :- | :-: |
+| Cisco IOS | cisco_ios |
+| Cisco Nexus | cisco_nxos |
+| Cisco IOS-XE | cisco_xe |
+| Juniper | juniper_junos |
+| Arista | arista_eos |
+| Palo Alto FW | paloalto_panos |
 
 Sudarshan Vijaya Kumar

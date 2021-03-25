@@ -1,15 +1,30 @@
 - hostname: AristaSW
   ip: 192.168.1.198
-  os: arista_eos
+  device_type: arista_eos
   username: cisco
   password: cisco123
   command_list:
     - show 
     - show version
+    - show ip bgp summary
+    - show ip bgp
+    - show ip route
 
 - hostname: CiscoRTR
   ip: 192.168.1.195
-  os: cisco_ios
+  device_type: cisco_ios
+  username: cisco
+  password: cisco123
+  command_list:
+    - show version
+    - show ip route 
+    - show ip bgp summary
+    - show ip route
+    - show ip bgp
+
+- hostname: CiscoNexus
+  ip: 192.168.1.195
+  device_type: cisco_nxos
   username: cisco
   password: cisco123
   command_list:

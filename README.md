@@ -88,6 +88,8 @@ In **Diff mode**, the application generates HTML diff for command output in the 
 
 ![alt text](images/diff.png)
 
+
+
 ## Supported Vendors
 
 The script uses netmiko to connect to devices and execute commands.

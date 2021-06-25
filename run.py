@@ -56,7 +56,7 @@ def capture(w, i):
 
     print(Fore.GREEN + f" ====>Capture Window Set to: {w}")
 
-    # print(Fore.YELLOW + "   ==> Enter device Credientials:")
+    # print(Fore.YELLOW + "   ==> Enter device Credentials:")
     # username = input(Fore.YELLOW + "    => Username: ")
     # password = getpass.getpass(Fore.YELLOW + "    => Password: ")
     execute_command_write_to_file(w, device_list)

@@ -6,4 +6,5 @@ __pycache__
 netmiko_supported_devices
 *device*
 #exception to *device*
+*.yaml
 !sample_device.yaml

@@ -124,6 +124,7 @@ def execute_command_write_to_file(capture_window, device_list):
             "host": device["ip"],
             "username": device["username"],
             "password": device["password"],
+            'global_delay_factor': 2
         }
         # Try to connect to device and raise exception if unsuccessful
         # and exit program
@@ -171,23 +172,26 @@ def execute_command_write_to_file(capture_window, device_list):
                 # print (file)
                 # Execute the command on device and parse the output through
                 # Genie if there is a parser for it.
-                output = remote_conn.send_command(
-                    command, cmd_verify=True
-                )
-                # print (output)
-                # Error executing command for cisco ios
-                if "Incomplete command" in output or "Ambigious" in output:
-                    print(
-                        Fore.RED
-                        + f"    => Error is executing command `{command}` "
-                        + f"msg: {output}"
+                try:
+                    output = remote_conn.send_command(
+                        command, cmd_verify=True
                     )
-                else:
-                    print(f"    => Command: '{command}'")
-                    # try writing the contents to a text file. If the command is
-                    # not parsed this will be successful
-                    with open(file + ".txt", "w") as f:
-                        f.write(output)
+                    # print (output)
+                    # Error executing command for cisco ios
+                    if "Incomplete command" in output or "Ambigious" in output:
+                        print(
+                            Fore.RED
+                            + f"    => Error is executing command `{command}` "
+                            + f"msg: {output}"
+                        )
+                    else:
+                        print(f"    => Command: '{command}'")
+                        # try writing the contents to a text file. If the command is
+                        # not parsed this will be successful
+                        with open(file + ".txt", "w") as f:
+                            f.write(output)
+                except:
+                    print(Fore.RED + f"    => Command: '{command} execution failed'")
 
 
 def compute_diff(dir1, dir2, diff_dir):

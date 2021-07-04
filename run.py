@@ -86,7 +86,7 @@ def diff(w1, w2):
     if os.path.isdir(w2) == False:
         print(Fore.RED + f"  ===>A '{w2}' capture does not exist.\n")
         sys.exit(2)
-    # Check if a diff already exisits between the two Capture Windows.
+    # Check if a diff already exists between the two Capture Windows.
     # If it does exit the program
     try:
         diff_dir = w1 + "_" + w2 + "_diff"
@@ -167,7 +167,7 @@ def execute_command_write_to_file(capture_window, device_list):
                 # defines the file name - a combination of host name and command
                 filename = hostname + "_" + re.sub("\s", "_", command)
                 # set path of the file that will be created.
-                # dependes on the capture_window paramater
+                # depends on the capture_window paramater
                 file = os.path.join(capture_window, filename)
                 # print (file)
                 # Execute the command on device and parse the output through

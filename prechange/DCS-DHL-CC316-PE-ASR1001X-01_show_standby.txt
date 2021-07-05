@@ -1,0 +1,1445 @@
+Port-channel3.100 - Group 100 (version 2)
+  State is Active
+    5 state changes, last state change 1y44w
+  Virtual IP address is 172.25.8.1
+  Active virtual MAC address is 0000.0c9f.f064 (MAC In Use)
+    Local virtual MAC address is 0000.0c9f.f064 (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 0.080 secs
+  Preemption enabled
+  Active router is local
+  Standby router is unknown
+  Priority 110 (configured 110)
+  Group name is "NET_MGMT" (cfgd)
+Port-channel3.3000 - Group 3000 (version 2)
+  State is Active
+    3 state changes, last state change 1y44w
+  Virtual IP address is 10.30.0.3
+  Active virtual MAC address is 0000.0c9f.fbb8 (MAC In Use)
+    Local virtual MAC address is 0000.0c9f.fbb8 (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 2.240 secs
+  Preemption enabled
+  Active router is local
+  Standby router is 10.30.0.2, priority 100 (expires in 9.952 sec)
+  Priority 110 (configured 110)
+  Group name is "BAYFIND_PA" (cfgd)
+Port-channel3.3001 - Group 3001 (version 2)
+  State is Active
+    3 state changes, last state change 1y44w
+  Virtual IP address is 10.30.0.11
+  Active virtual MAC address is 0000.0c9f.fbb9 (MAC In Use)
+    Local virtual MAC address is 0000.0c9f.fbb9 (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 0.624 secs
+  Preemption enabled
+  Active router is local
+  Standby router is 10.30.0.10, priority 100 (expires in 8.416 sec)
+  Priority 110 (configured 110)
+  Group name is "ETIHAD" (cfgd)
+Port-channel3.3002 - Group 3002 (version 2)
+  State is Active
+    3 state changes, last state change 1y44w
+  Virtual IP address is 10.30.0.19
+  Active virtual MAC address is 0000.0c9f.fbba (MAC In Use)
+    Local virtual MAC address is 0000.0c9f.fbba (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 0.832 secs
+  Preemption enabled
+  Active router is local
+  Standby router is 10.30.0.18, priority 100 (expires in 9.104 sec)
+  Priority 110 (configured 110)
+  Group name is "AMSA" (cfgd)
+Port-channel3.3003 - Group 3003 (version 2)
+  State is Active
+    3 state changes, last state change 1y44w
+  Virtual IP address is 10.30.0.27
+  Active virtual MAC address is 0000.0c9f.fbbb (MAC In Use)
+    Local virtual MAC address is 0000.0c9f.fbbb (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 0.864 secs
+  Preemption enabled
+  Active router is local
+  Standby router is 10.30.0.26, priority 100 (expires in 10.592 sec)
+  Priority 110 (configured 110)
+  Group name is "FRAME" (cfgd)
+Port-channel3.3004 - Group 3004 (version 2)
+  State is Active
+    8 state changes, last state change 1y44w
+  Virtual IP address is 10.30.0.35
+  Active virtual MAC address is 0000.0c9f.fbbc (MAC In Use)
+    Local virtual MAC address is 0000.0c9f.fbbc (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 0.112 secs
+  Preemption enabled
+  Active router is local
+  Standby router is 10.30.0.34, priority 100 (expires in 8.400 sec)
+  Priority 110 (configured 110)
+  Group name is "ARE" (cfgd)
+Port-channel3.3005 - Group 3005 (version 2)
+  State is Active
+    3 state changes, last state change 1y44w
+  Virtual IP address is 10.30.0.43
+  Active virtual MAC address is 0000.0c9f.fbbd (MAC In Use)
+    Local virtual MAC address is 0000.0c9f.fbbd (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 2.736 secs
+  Preemption enabled
+  Active router is local
+  Standby router is 10.30.0.42, priority 100 (expires in 9.184 sec)
+  Priority 110 (configured 110)
+  Group name is "QATAR" (cfgd)
+Port-channel3.3006 - Group 3006 (version 2)
+  State is Active
+    3 state changes, last state change 1y44w
+  Virtual IP address is 10.30.0.51
+  Active virtual MAC address is 0000.0c9f.fbbe (MAC In Use)
+    Local virtual MAC address is 0000.0c9f.fbbe (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 0.272 secs
+  Preemption enabled
+  Active router is local
+  Standby router is 10.30.0.50, priority 100 (expires in 8.224 sec)
+  Priority 110 (configured 110)
+  Group name is "FIREWALL_XCONNECT" (cfgd)
+Port-channel3.3007 - Group 3007 (version 2)
+  State is Active
+    4 state changes, last state change 1y44w
+  Virtual IP address is 10.30.0.59
+  Active virtual MAC address is 0000.0c9f.fbbf (MAC In Use)
+    Local virtual MAC address is 0000.0c9f.fbbf (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 0.080 secs
+  Preemption enabled
+  Active router is local
+  Standby router is 10.30.0.58, priority 100 (expires in 11.168 sec)
+  Priority 110 (configured 110)
+  Group name is "KYOTO" (cfgd)
+Port-channel3.3008 - Group 3008 (version 2)
+  State is Active
+    3 state changes, last state change 1y44w
+  Virtual IP address is 10.30.0.67
+  Active virtual MAC address is 0000.0c9f.fbc0 (MAC In Use)
+    Local virtual MAC address is 0000.0c9f.fbc0 (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 1.104 secs
+  Preemption enabled
+  Active router is local
+  Standby router is 10.30.0.66, priority 100 (expires in 8.352 sec)
+  Priority 110 (configured 110)
+  Group name is "VPN_SERVICES" (cfgd)
+Port-channel3.3009 - Group 3009 (version 2)
+  State is Active
+    4 state changes, last state change 1y44w
+  Virtual IP address is 10.30.0.75
+  Active virtual MAC address is 0000.0c9f.fbc1 (MAC In Use)
+    Local virtual MAC address is 0000.0c9f.fbc1 (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 0.528 secs
+  Preemption enabled
+  Active router is local
+  Standby router is 10.30.0.74, priority 100 (expires in 11.232 sec)
+  Priority 110 (configured 110)
+  Group name is "LAUNCESTON_TRANSIT" (cfgd)
+Port-channel3.3010 - Group 3010 (version 2)
+  State is Active
+    3 state changes, last state change 1y44w
+  Virtual IP address is 10.30.0.83
+  Active virtual MAC address is 0000.0c9f.fbc2 (MAC In Use)
+    Local virtual MAC address is 0000.0c9f.fbc2 (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 2.544 secs
+  Preemption enabled
+  Active router is local
+  Standby router is 10.30.0.82, priority 100 (expires in 10.272 sec)
+  Priority 110 (configured 110)
+  Group name is "WHSMITH-DMZ" (cfgd)
+Port-channel3.3011 - Group 3011 (version 2)
+  State is Active
+    1 state change, last state change 1y37w
+  Virtual IP address is 10.30.0.91
+  Active virtual MAC address is 0000.0c9f.fbc3 (MAC In Use)
+    Local virtual MAC address is 0000.0c9f.fbc3 (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 0.560 secs
+  Preemption enabled
+  Active router is local
+  Standby router is 10.30.0.90, priority 100 (expires in 9.968 sec)
+  Priority 110 (configured 110)
+  Group name is "DCWC" (cfgd)
+Port-channel3.3012 - Group 3012 (version 2)
+  State is Active
+    3 state changes, last state change 1y44w
+  Virtual IP address is 10.30.0.99
+  Active virtual MAC address is 0000.0c9f.fbc4 (MAC In Use)
+    Local virtual MAC address is 0000.0c9f.fbc4 (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 1.296 secs
+  Preemption enabled
+  Active router is local
+  Standby router is 10.30.0.98, priority 100 (expires in 10.944 sec)
+  Priority 110 (configured 110)
+  Group name is "APPLE" (cfgd)
+Port-channel3.3013 - Group 3013 (version 2)
+  State is Active
+    3 state changes, last state change 1y44w
+  Virtual IP address is 10.30.0.107
+  Active virtual MAC address is 0000.0c9f.fbc5 (MAC In Use)
+    Local virtual MAC address is 0000.0c9f.fbc5 (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 2.224 secs
+  Preemption enabled
+  Active router is local
+  Standby router is 10.30.0.106, priority 100 (expires in 10.400 sec)
+  Priority 110 (configured 110)
+  Group name is "ROYAL_BRUNEI" (cfgd)
+Port-channel3.3014 - Group 3014 (version 2)
+  State is Active
+    4 state changes, last state change 1y44w
+  Virtual IP address is 10.30.0.115
+  Active virtual MAC address is 0000.0c9f.fbc6 (MAC In Use)
+    Local virtual MAC address is 0000.0c9f.fbc6 (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 1.632 secs
+  Preemption enabled
+  Active router is local
+  Standby router is 10.30.0.114, priority 100 (expires in 10.096 sec)
+  Priority 110 (configured 110)
+  Group name is "SKYBUS" (cfgd)
+Port-channel3.3015 - Group 3015 (version 2)
+  State is Active
+    3 state changes, last state change 1y44w
+  Virtual IP address is 10.30.0.123
+  Active virtual MAC address is 0000.0c9f.fbc7 (MAC In Use)
+    Local virtual MAC address is 0000.0c9f.fbc7 (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 0.640 secs
+  Preemption enabled
+  Active router is local
+  Standby router is 10.30.0.122, priority 100 (expires in 9.248 sec)
+  Priority 110 (configured 110)
+  Group name is "hsrp-Po3.3015-3015" (default)
+Port-channel3.3016 - Group 3016 (version 2)
+  State is Active
+    5 state changes, last state change 1y44w
+  Virtual IP address is 10.30.0.131
+  Active virtual MAC address is 0000.0c9f.fbc8 (MAC In Use)
+    Local virtual MAC address is 0000.0c9f.fbc8 (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 2.176 secs
+  Preemption enabled
+  Active router is local
+  Standby router is unknown
+  Priority 110 (configured 110)
+  Group name is "AIR_NORTH_INET" (cfgd)
+Port-channel3.3017 - Group 3017 (version 2)
+  State is Active
+    3 state changes, last state change 1y44w
+  Virtual IP address is 10.30.0.139
+  Active virtual MAC address is 0000.0c9f.fbc9 (MAC In Use)
+    Local virtual MAC address is 0000.0c9f.fbc9 (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 0.576 secs
+  Preemption enabled
+  Active router is local
+  Standby router is 10.30.0.138, priority 100 (expires in 9.680 sec)
+  Priority 110 (configured 110)
+  Group name is "VICTORIA_POLICE" (cfgd)
+Port-channel3.3018 - Group 3018 (version 2)
+  State is Active
+    3 state changes, last state change 1y44w
+  Virtual IP address is 10.30.0.147
+  Active virtual MAC address is 0000.0c9f.fbca (MAC In Use)
+    Local virtual MAC address is 0000.0c9f.fbca (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 1.008 secs
+  Preemption enabled
+  Active router is local
+  Standby router is 10.30.0.146, priority 100 (expires in 10.624 sec)
+  Priority 110 (configured 110)
+  Group name is "HOTSPOT" (cfgd)
+Port-channel3.3019 - Group 3019 (version 2)
+  State is Active
+    2 state changes, last state change 1y33w
+  Virtual IP address is 10.30.0.155
+  Active virtual MAC address is 0000.0c9f.fbcb (MAC In Use)
+    Local virtual MAC address is 0000.0c9f.fbcb (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 1.920 secs
+  Preemption enabled
+  Active router is local
+  Standby router is 10.30.0.154, priority 100 (expires in 10.416 sec)
+  Priority 110 (configured 110)
+  Group name is "ROOT_PROJECTS" (cfgd)
+Port-channel3.3020 - Group 3020 (version 2)
+  State is Active
+    4 state changes, last state change 1y44w
+  Virtual IP address is 10.30.0.163
+  Active virtual MAC address is 0000.0c9f.fbcc (MAC In Use)
+    Local virtual MAC address is 0000.0c9f.fbcc (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 0.608 secs
+  Preemption enabled
+  Active router is local
+  Standby router is 10.30.0.162, priority 100 (expires in 10.400 sec)
+  Priority 110 (configured 110)
+  Group name is "ETIHAD_LOUNGE" (cfgd)
+Port-channel3.3021 - Group 3021 (version 2)
+  State is Active
+    2 state changes, last state change 1y37w
+  Virtual IP address is 10.30.0.171
+  Active virtual MAC address is 0000.0c9f.fbcd (MAC In Use)
+    Local virtual MAC address is 0000.0c9f.fbcd (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 1.920 secs
+  Preemption enabled
+  Active router is local
+  Standby router is 10.30.0.170, priority 100 (expires in 9.664 sec)
+  Priority 110 (configured 110)
+  Group name is "IKON" (cfgd)
+Port-channel3.3022 - Group 3022 (version 2)
+  State is Active
+    6 state changes, last state change 41w2d
+  Virtual IP address is 10.30.0.179
+  Active virtual MAC address is 0000.0c9f.fbce (MAC In Use)
+    Local virtual MAC address is 0000.0c9f.fbce (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 1.456 secs
+  Preemption enabled
+  Active router is local
+  Standby router is 10.30.0.178, priority 100 (expires in 9.040 sec)
+  Priority 110 (configured 110)
+  Group name is "SSP" (cfgd)
+Port-channel3.3023 - Group 3023 (version 2)
+  State is Active
+    3 state changes, last state change 1y44w
+  Virtual IP address is 10.30.0.187
+  Active virtual MAC address is 0000.0c9f.fbcf (MAC In Use)
+    Local virtual MAC address is 0000.0c9f.fbcf (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 1.680 secs
+  Preemption enabled
+  Active router is local
+  Standby router is 10.30.0.186, priority 100 (expires in 8.160 sec)
+  Priority 110 (configured 110)
+  Group name is "INFLIGHT_LOGISTICS" (cfgd)
+Port-channel3.3024 - Group 3024 (version 2)
+  State is Active
+    2 state changes, last state change 1y37w
+  Virtual IP address is 10.30.0.195
+  Active virtual MAC address is 0000.0c9f.fbd0 (MAC In Use)
+    Local virtual MAC address is 0000.0c9f.fbd0 (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 1.824 secs
+  Preemption enabled
+  Active router is local
+  Standby router is 10.30.0.194, priority 100 (expires in 9.120 sec)
+  Priority 110 (configured 110)
+  Group name is "UNITED_LIFTS" (cfgd)
+Port-channel3.3025 - Group 3025 (version 2)
+  State is Active
+    4 state changes, last state change 1y44w
+  Virtual IP address is 10.30.0.203
+  Active virtual MAC address is 0000.0c9f.fbd1 (MAC In Use)
+    Local virtual MAC address is 0000.0c9f.fbd1 (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 1.664 secs
+  Preemption enabled
+  Active router is local
+  Standby router is 10.30.0.202, priority 100 (expires in 9.760 sec)
+  Priority 110 (configured 110)
+  Group name is "MA_INET_ONLY" (cfgd)
+Port-channel3.3026 - Group 3026 (version 2)
+  State is Active
+    3 state changes, last state change 1y44w
+  Virtual IP address is 10.30.0.211
+  Active virtual MAC address is 0000.0c9f.fbd2 (MAC In Use)
+    Local virtual MAC address is 0000.0c9f.fbd2 (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 1.024 secs
+  Preemption enabled
+  Active router is local
+  Standby router is 10.30.0.210, priority 100 (expires in 9.744 sec)
+  Priority 110 (configured 110)
+  Group name is "LPR" (cfgd)
+Port-channel3.3027 - Group 3027 (version 2)
+  State is Active
+    2 state changes, last state change 19w5d
+  Virtual IP address is 10.30.0.219
+  Active virtual MAC address is 0000.0c9f.fbd3 (MAC In Use)
+    Local virtual MAC address is 0000.0c9f.fbd3 (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 0.576 secs
+  Preemption enabled
+  Active router is local
+  Standby router is 10.30.0.218, priority 100 (expires in 9.328 sec)
+  Priority 110 (configured 110)
+  Group name is "WHEALTH" (cfgd)
+Port-channel3.3028 - Group 3028 (version 2)
+  State is Active
+    3 state changes, last state change 1y44w
+  Virtual IP address is 10.30.0.227
+  Active virtual MAC address is 0000.0c9f.fbd4 (MAC In Use)
+    Local virtual MAC address is 0000.0c9f.fbd4 (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 2.592 secs
+  Preemption enabled
+  Active router is local
+  Standby router is 10.30.0.226, priority 100 (expires in 9.552 sec)
+  Priority 110 (configured 110)
+  Group name is "SITA" (cfgd)
+Port-channel3.3029 - Group 3029 (version 2)
+  State is Active
+    3 state changes, last state change 1y44w
+  Virtual IP address is 10.30.0.235
+  Active virtual MAC address is 0000.0c9f.fbd5 (MAC In Use)
+    Local virtual MAC address is 0000.0c9f.fbd5 (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 1.216 secs
+  Preemption enabled
+  Active router is local
+  Standby router is 10.30.0.234, priority 100 (expires in 10.384 sec)
+  Priority 110 (configured 110)
+  Group name is "HANNAS_CAFE" (cfgd)
+Port-channel3.3030 - Group 3030 (version 2)
+  State is Active
+    3 state changes, last state change 1y44w
+  Virtual IP address is 10.30.0.243
+  Active virtual MAC address is 0000.0c9f.fbd6 (MAC In Use)
+    Local virtual MAC address is 0000.0c9f.fbd6 (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 0.576 secs
+  Preemption enabled
+  Active router is local
+  Standby router is 10.30.0.242, priority 100 (expires in 9.216 sec)
+  Priority 110 (configured 110)
+  Group name is "SKIDATA_VALET" (cfgd)
+Port-channel3.3031 - Group 3031 (version 2)
+  State is Active
+    4 state changes, last state change 1y44w
+  Virtual IP address is 10.30.0.251
+  Active virtual MAC address is 0000.0c9f.fbd7 (MAC In Use)
+    Local virtual MAC address is 0000.0c9f.fbd7 (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 2.816 secs
+  Preemption enabled
+  Active router is local
+  Standby router is 10.30.0.250, priority 100 (expires in 9.808 sec)
+  Priority 110 (configured 110)
+  Group name is "FRAME_INTERNET" (cfgd)
+Port-channel3.3032 - Group 3032 (version 2)
+  State is Active
+    3 state changes, last state change 1y44w
+  Virtual IP address is 10.30.1.3
+  Active virtual MAC address is 0000.0c9f.fbd8 (MAC In Use)
+    Local virtual MAC address is 0000.0c9f.fbd8 (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 1.472 secs
+  Preemption enabled
+  Active router is local
+  Standby router is 10.30.1.2, priority 100 (expires in 10.160 sec)
+  Priority 110 (configured 110)
+  Group name is "ABC" (cfgd)
+Port-channel3.3033 - Group 3033 (version 2)
+  State is Active
+    3 state changes, last state change 1y44w
+  Virtual IP address is 10.30.1.11
+  Active virtual MAC address is 0000.0c9f.fbd9 (MAC In Use)
+    Local virtual MAC address is 0000.0c9f.fbd9 (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 1.840 secs
+  Preemption enabled
+  Active router is local
+  Standby router is 10.30.1.10, priority 100 (expires in 7.472 sec)
+  Priority 110 (configured 110)
+  Group name is "PA_EWIS" (cfgd)
+Port-channel3.3034 - Group 3034 (version 2)
+  State is Init (interface down)
+    4 state changes, last state change 1y20w
+  Virtual IP address is 10.30.1.19
+  Active virtual MAC address is unknown (MAC Not In Use)
+    Local virtual MAC address is 0000.0c9f.fbda (v2 default)
+  Hello time 3 sec, hold time 10 sec
+  Preemption enabled
+  Active router is unknown
+  Standby router is unknown
+  Priority 110 (configured 110)
+  Group name is "SPOTLESS" (cfgd)
+Port-channel3.3035 - Group 3035 (version 2)
+  State is Active
+    4 state changes, last state change 1y44w
+  Virtual IP address is 10.30.1.27
+  Active virtual MAC address is 0000.0c9f.fbdb (MAC In Use)
+    Local virtual MAC address is 0000.0c9f.fbdb (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 2.720 secs
+  Preemption enabled
+  Active router is local
+  Standby router is 10.30.1.26, priority 100 (expires in 9.456 sec)
+  Priority 110 (configured 110)
+  Group name is "THAI_AIRWAYS" (cfgd)
+Port-channel3.3036 - Group 3036 (version 2)
+  State is Active
+    3 state changes, last state change 1y44w
+  Virtual IP address is 10.30.1.35
+  Active virtual MAC address is 0000.0c9f.fbdc (MAC In Use)
+    Local virtual MAC address is 0000.0c9f.fbdc (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 1.872 secs
+  Preemption enabled
+  Active router is local
+  Standby router is 10.30.1.34, priority 100 (expires in 9.152 sec)
+  Priority 110 (configured 110)
+  Group name is "OZLOOK" (cfgd)
+Port-channel3.3037 - Group 3037 (version 2)
+  State is Standby
+    6 state changes, last state change 1y44w
+  Virtual IP address is 10.30.1.43
+  Active virtual MAC address is 0000.0c9f.fbdd (MAC Not In Use)
+    Local virtual MAC address is 0000.0c9f.fbdd (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 1.088 secs
+  Preemption enabled
+  Active router is 10.30.1.42, priority 110 (expires in 9.968 sec)
+    MAC address is 7c0e.cef3.e942
+  Standby router is local
+  Priority 110 (configured 110)
+  Group name is "SITA_INTERNET" (cfgd)
+Port-channel3.3039 - Group 3039 (version 2)
+  State is Active
+    4 state changes, last state change 1y44w
+  Virtual IP address is 10.30.1.59
+  Active virtual MAC address is 0000.0c9f.fbdf (MAC In Use)
+    Local virtual MAC address is 0000.0c9f.fbdf (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 2.576 secs
+  Preemption enabled
+  Active router is local
+  Standby router is 10.30.1.58, priority 100 (expires in 8.656 sec)
+  Priority 110 (configured 110)
+  Group name is "AIRSIDE_PROJECTS" (cfgd)
+Port-channel3.3040 - Group 3040 (version 2)
+  State is Active
+    4 state changes, last state change 1y44w
+  Virtual IP address is 10.30.1.67
+  Active virtual MAC address is 0000.0c9f.fbe0 (MAC In Use)
+    Local virtual MAC address is 0000.0c9f.fbe0 (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 0.704 secs
+  Preemption enabled
+  Active router is local
+  Standby router is 10.30.1.66, priority 100 (expires in 10.656 sec)
+  Priority 110 (configured 110)
+  Group name is "BCS" (cfgd)
+Port-channel3.3041 - Group 3041 (version 2)
+  State is Active
+    4 state changes, last state change 1y44w
+  Virtual IP address is 10.30.1.75
+  Active virtual MAC address is 0000.0c9f.fbe1 (MAC In Use)
+    Local virtual MAC address is 0000.0c9f.fbe1 (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 2.128 secs
+  Preemption enabled
+  Active router is local
+  Standby router is 10.30.1.74, priority 100 (expires in 8.464 sec)
+  Priority 110 (configured 110)
+  Group name is "XIAMEN_AIR" (cfgd)
+Port-channel3.3042 - Group 3042 (version 2)
+  State is Active
+    5 state changes, last state change 1y44w
+  Virtual IP address is 10.30.1.83
+  Active virtual MAC address is 0000.0c9f.fbe2 (MAC In Use)
+    Local virtual MAC address is 0000.0c9f.fbe2 (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 1.792 secs
+  Preemption enabled
+  Active router is local
+  Standby router is unknown
+  Priority 110 (configured 110)
+  Group name is "LAUNCESTON_HOTSPOT" (cfgd)
+Port-channel3.3043 - Group 3043 (version 2)
+  State is Active
+    4 state changes, last state change 1y44w
+  Virtual IP address is 10.30.1.91
+  Active virtual MAC address is 0000.0c9f.fbe3 (MAC In Use)
+    Local virtual MAC address is 0000.0c9f.fbe3 (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 1.248 secs
+  Preemption enabled
+  Active router is local
+  Standby router is 10.30.1.90, priority 100 (expires in 11.120 sec)
+  Priority 110 (configured 110)
+  Group name is "BURBERRY" (cfgd)
+Port-channel3.3044 - Group 3044 (version 2)
+  State is Active
+    4 state changes, last state change 1y44w
+  Virtual IP address is 10.30.1.99
+  Active virtual MAC address is 0000.0c9f.fbe4 (MAC In Use)
+    Local virtual MAC address is 0000.0c9f.fbe4 (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 0.320 secs
+  Preemption enabled
+  Active router is local
+  Standby router is 10.30.1.98, priority 100 (expires in 9.632 sec)
+  Priority 110 (configured 110)
+  Group name is "BP" (cfgd)
+Port-channel3.3045 - Group 3045 (version 2)
+  State is Active
+    4 state changes, last state change 1y44w
+  Virtual IP address is 10.30.1.107
+  Active virtual MAC address is 0000.0c9f.fbe5 (MAC In Use)
+    Local virtual MAC address is 0000.0c9f.fbe5 (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 0.848 secs
+  Preemption enabled
+  Active router is local
+  Standby router is 10.30.1.106, priority 100 (expires in 7.264 sec)
+  Priority 110 (configured 110)
+  Group name is "JAPAN_AIRLINES" (cfgd)
+Port-channel3.3046 - Group 3046 (version 2)
+  State is Active
+    4 state changes, last state change 1y44w
+  Virtual IP address is 10.30.1.115
+  Active virtual MAC address is 0000.0c9f.fbe6 (MAC In Use)
+    Local virtual MAC address is 0000.0c9f.fbe6 (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 0.016 secs
+  Preemption enabled
+  Active router is local
+  Standby router is 10.30.1.114, priority 100 (expires in 10.256 sec)
+  Priority 110 (configured 110)
+  Group name is "AEROCARE" (cfgd)
+Port-channel3.3047 - Group 3047 (version 2)
+  State is Active
+    4 state changes, last state change 1y44w
+  Virtual IP address is 10.30.1.123
+  Active virtual MAC address is 0000.0c9f.fbe7 (MAC In Use)
+    Local virtual MAC address is 0000.0c9f.fbe7 (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 1.456 secs
+  Preemption enabled
+  Active router is local
+  Standby router is 10.30.1.122, priority 100 (expires in 10.608 sec)
+  Priority 110 (configured 110)
+  Group name is "MALINDO_AIR" (cfgd)
+Port-channel3.3048 - Group 3048 (version 2)
+  State is Active
+    4 state changes, last state change 1y44w
+  Virtual IP address is 10.30.1.131
+  Active virtual MAC address is 0000.0c9f.fbe8 (MAC In Use)
+    Local virtual MAC address is 0000.0c9f.fbe8 (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 1.760 secs
+  Preemption enabled
+  Active router is local
+  Standby router is 10.30.1.130, priority 100 (expires in 9.520 sec)
+  Priority 110 (configured 110)
+  Group name is "ALPHA" (cfgd)
+Port-channel3.3049 - Group 3049 (version 2)
+  State is Active
+    8 state changes, last state change 1y44w
+  Virtual IP address is 10.30.1.139
+  Active virtual MAC address is 0000.0c9f.fbe9 (MAC In Use)
+    Local virtual MAC address is 0000.0c9f.fbe9 (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 0.432 secs
+  Preemption enabled
+  Active router is local
+  Standby router is unknown
+  Priority 110 (configured 110)
+  Group name is "LWAPP" (cfgd)
+Port-channel3.3050 - Group 3050 (version 2)
+  State is Active
+    4 state changes, last state change 1y44w
+  Virtual IP address is 10.30.1.147
+  Active virtual MAC address is 0000.0c9f.fbea (MAC In Use)
+    Local virtual MAC address is 0000.0c9f.fbea (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 0.784 secs
+  Preemption enabled
+  Active router is local
+  Standby router is 10.30.1.146, priority 100 (expires in 8.208 sec)
+  Priority 110 (configured 110)
+  Group name is "MAX_MARA" (cfgd)
+Port-channel3.3051 - Group 3051 (version 2)
+  State is Active
+    8 state changes, last state change 1y44w
+  Virtual IP address is 10.30.1.153
+  Active virtual MAC address is 0000.0c9f.fbeb (MAC In Use)
+    Local virtual MAC address is 0000.0c9f.fbeb (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 1.408 secs
+  Preemption enabled
+  Active router is local
+  Standby router is unknown
+  Priority 110 (configured 110)
+  Group name is "AVINET_CUTE_TRANSIT" (cfgd)
+Port-channel3.3052 - Group 3052 (version 2)
+  State is Active
+    4 state changes, last state change 1y44w
+  Virtual IP address is 10.30.1.163
+  Active virtual MAC address is 0000.0c9f.fbec (MAC In Use)
+    Local virtual MAC address is 0000.0c9f.fbec (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 2.320 secs
+  Preemption enabled
+  Active router is local
+  Standby router is 10.30.1.162, priority 100 (expires in 7.648 sec)
+  Priority 110 (configured 110)
+  Group name is "LENDLEASE" (cfgd)
+Port-channel3.3053 - Group 3053 (version 2)
+  State is Active
+    4 state changes, last state change 1y44w
+  Virtual IP address is 10.30.1.171
+  Active virtual MAC address is 0000.0c9f.fbed (MAC In Use)
+    Local virtual MAC address is 0000.0c9f.fbed (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 1.728 secs
+  Preemption enabled
+  Active router is local
+  Standby router is 10.30.1.170, priority 100 (expires in 8.112 sec)
+  Priority 110 (configured 110)
+  Group name is "VIS" (cfgd)
+Port-channel3.3054 - Group 3054 (version 2)
+  State is Active
+    2 state changes, last state change 1y37w
+  Virtual IP address is 10.30.1.179
+  Active virtual MAC address is 0000.0c9f.fbee (MAC In Use)
+    Local virtual MAC address is 0000.0c9f.fbee (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 0.752 secs
+  Preemption enabled
+  Active router is local
+  Standby router is 10.30.1.178, priority 100 (expires in 8.176 sec)
+  Priority 110 (configured 110)
+  Group name is "AIR_MASTER" (cfgd)
+Port-channel3.3055 - Group 3055 (version 2)
+  State is Active
+    4 state changes, last state change 1y44w
+  Virtual IP address is 10.30.1.187
+  Active virtual MAC address is 0000.0c9f.fbef (MAC In Use)
+    Local virtual MAC address is 0000.0c9f.fbef (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 1.488 secs
+  Preemption enabled
+  Active router is local
+  Standby router is 10.30.1.186, priority 100 (expires in 8.528 sec)
+  Priority 110 (configured 110)
+  Group name is "TIBCO" (cfgd)
+Port-channel3.3056 - Group 3056 (version 2)
+  State is Active
+    4 state changes, last state change 1y44w
+  Virtual IP address is 10.30.1.195
+  Active virtual MAC address is 0000.0c9f.fbf0 (MAC In Use)
+    Local virtual MAC address is 0000.0c9f.fbf0 (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 2.416 secs
+  Preemption enabled
+  Active router is local
+  Standby router is 10.30.1.194, priority 100 (expires in 10.160 sec)
+  Priority 110 (configured 110)
+  Group name is "AMEX" (cfgd)
+Port-channel3.3057 - Group 3057 (version 2)
+  State is Active
+    5 state changes, last state change 1y44w
+  Virtual IP address is 10.30.1.203
+  Active virtual MAC address is 0000.0c9f.fbf1 (MAC In Use)
+    Local virtual MAC address is 0000.0c9f.fbf1 (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 1.216 secs
+  Preemption enabled
+  Active router is local
+  Standby router is unknown
+  Priority 100 (default 100)
+  Group name is "MEL_EMV" (cfgd)
+Port-channel3.3058 - Group 3058 (version 2)
+  State is Active
+    7 state changes, last state change 1y44w
+  Virtual IP address is 10.30.1.211
+  Active virtual MAC address is 0000.0c9f.fbf2 (MAC In Use)
+    Local virtual MAC address is 0000.0c9f.fbf2 (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 2.400 secs
+  Preemption enabled
+  Active router is local
+  Standby router is 10.30.1.210, priority 100 (expires in 9.152 sec)
+  Priority 110 (configured 110)
+  Group name is "LST_EMV" (cfgd)
+Port-channel3.3059 - Group 3059 (version 2)
+  State is Active
+    4 state changes, last state change 1y44w
+  Virtual IP address is 10.31.0.219
+  Active virtual MAC address is 0000.0c9f.fbf3 (MAC In Use)
+    Local virtual MAC address is 0000.0c9f.fbf3 (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 0.816 secs
+  Preemption enabled
+  Active router is local
+  Standby router is 10.31.0.218, priority 100 (expires in 10.144 sec)
+  Priority 110 (configured 110)
+  Group name is "EMV_TEST" (cfgd)
+Port-channel3.3060 - Group 3060 (version 2)
+  State is Active
+    4 state changes, last state change 1y44w
+  Virtual IP address is 10.30.1.227
+  Active virtual MAC address is 0000.0c9f.fbf4 (MAC In Use)
+    Local virtual MAC address is 0000.0c9f.fbf4 (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 1.072 secs
+  Preemption enabled
+  Active router is local
+  Standby router is 10.30.1.226, priority 100 (expires in 9.824 sec)
+  Priority 110 (configured 110)
+  Group name is "JETSTAR" (cfgd)
+Port-channel3.3061 - Group 3061 (version 2)
+  State is Active
+    4 state changes, last state change 1y44w
+  Virtual IP address is 10.30.1.235
+  Active virtual MAC address is 0000.0c9f.fbf5 (MAC In Use)
+    Local virtual MAC address is 0000.0c9f.fbf5 (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 2.208 secs
+  Preemption enabled
+  Active router is local
+  Standby router is 10.30.1.234, priority 100 (expires in 9.744 sec)
+  Priority 110 (configured 110)
+  Group name is "AIR_CANADA" (cfgd)
+Port-channel3.3062 - Group 3062 (version 2)
+  State is Active
+    4 state changes, last state change 1y44w
+  Virtual IP address is 10.30.1.243
+  Active virtual MAC address is 0000.0c9f.fbf6 (MAC In Use)
+    Local virtual MAC address is 0000.0c9f.fbf6 (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 1.872 secs
+  Preemption enabled
+  Active router is local
+  Standby router is 10.30.1.242, priority 100 (expires in 8.896 sec)
+  Priority 110 (configured 110)
+  Group name is "PROGRAMMED" (cfgd)
+Port-channel3.3063 - Group 3063 (version 2)
+  State is Active
+    4 state changes, last state change 1y44w
+  Virtual IP address is 10.30.1.251
+  Active virtual MAC address is 0000.0c9f.fbf7 (MAC In Use)
+    Local virtual MAC address is 0000.0c9f.fbf7 (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 0.448 secs
+  Preemption enabled
+  Active router is local
+  Standby router is 10.30.1.250, priority 100 (expires in 8.272 sec)
+  Priority 110 (configured 110)
+  Group name is "AIRNZ_LOUNGE" (cfgd)
+Port-channel3.3064 - Group 3064 (version 2)
+  State is Active
+    5 state changes, last state change 1y13w
+  Virtual IP address is 10.30.2.3
+  Active virtual MAC address is 0000.0c9f.fbf8 (MAC In Use)
+    Local virtual MAC address is 0000.0c9f.fbf8 (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 1.376 secs
+  Preemption enabled
+  Active router is local
+  Standby router is 10.30.2.2, priority 100 (expires in 9.344 sec)
+  Priority 110 (configured 110)
+  Group name is "ETHAN" (cfgd)
+Port-channel3.3065 - Group 3065 (version 2)
+  State is Active
+    2 state changes, last state change 48w3d
+  Virtual IP address is 10.30.2.11
+  Active virtual MAC address is 0000.0c9f.fbf9 (MAC In Use)
+    Local virtual MAC address is 0000.0c9f.fbf9 (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 0.816 secs
+  Preemption enabled
+  Active router is local
+  Standby router is 10.30.2.10, priority 100 (expires in 7.952 sec)
+  Priority 110 (configured 110)
+  Group name is "CYBERSEC" (cfgd)
+Port-channel3.3066 - Group 3066 (version 2)
+  State is Active
+    2 state changes, last state change 40w6d
+  Virtual IP address is 10.30.2.19
+  Active virtual MAC address is 0000.0c9f.fbfa (MAC In Use)
+    Local virtual MAC address is 0000.0c9f.fbfa (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 0.304 secs
+  Preemption enabled
+  Active router is local
+  Standby router is 10.30.2.18, priority 100 (expires in 9.712 sec)
+  Priority 110 (configured 110)
+  Group name is "REDROCK" (cfgd)
+Port-channel3.3067 - Group 3067 (version 2)
+  State is Active
+    2 state changes, last state change 8w3d
+  Virtual IP address is 10.30.2.27
+  Active virtual MAC address is 0000.0c9f.fbfb (MAC In Use)
+    Local virtual MAC address is 0000.0c9f.fbfb (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 0.096 secs
+  Preemption enabled
+  Active router is local
+  Standby router is 10.30.2.26, priority 100 (expires in 9.040 sec)
+  Priority 110 (configured 110)
+  Group name is "CYBERSEC-HOSTED-SERVICES" (cfgd)
+Port-channel3.3100 - Group 3100 (version 2)
+  State is Active
+    3 state changes, last state change 1y44w
+  Virtual IP address is 10.31.0.3
+  Active virtual MAC address is 0000.0c9f.fc1c (MAC In Use)
+    Local virtual MAC address is 0000.0c9f.fc1c (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 1.200 secs
+  Preemption enabled
+  Active router is local
+  Standby router is 10.31.0.2, priority 100 (expires in 11.376 sec)
+  Priority 110 (configured 110)
+  Group name is "INTERNET" (cfgd)
+Port-channel3.3101 - Group 3101 (version 2)
+  State is Standby
+    4 state changes, last state change 1y44w
+  Virtual IP address is 10.31.0.11
+  Active virtual MAC address is 0000.0c9f.fc1d (MAC Not In Use)
+    Local virtual MAC address is 0000.0c9f.fc1d (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 0.720 secs
+  Preemption enabled
+  Active router is 10.31.0.10, priority 110 (expires in 9.328 sec)
+    MAC address is 7c0e.cef3.e942
+  Standby router is local
+  Priority 110 (configured 110)
+  Group name is "LAUNCESTON" (cfgd)
+Port-channel3.3102 - Group 3102 (version 2)
+  State is Active
+    4 state changes, last state change 1y44w
+  Virtual IP address is 10.31.0.19
+  Active virtual MAC address is 0000.0c9f.fc1e (MAC In Use)
+    Local virtual MAC address is 0000.0c9f.fc1e (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 2.448 secs
+  Preemption enabled
+  Active router is local
+  Standby router is 10.31.0.18, priority 100 (expires in 9.936 sec)
+  Priority 110 (configured 110)
+  Group name is "ICT_INET" (cfgd)
+Port-channel3.3103 - Group 3103 (version 2)
+  State is Standby
+    4 state changes, last state change 1y44w
+  Virtual IP address is 10.31.0.27
+  Active virtual MAC address is 0000.0c9f.fc1f (MAC Not In Use)
+    Local virtual MAC address is 0000.0c9f.fc1f (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 0.800 secs
+  Preemption enabled
+  Active router is 10.31.0.26, priority 110 (expires in 10.096 sec)
+    MAC address is 7c0e.cef3.e942
+  Standby router is local
+  Priority 110 (configured 110)
+  Group name is "ADSB" (cfgd)
+Port-channel3.3104 - Group 3104 (version 2)
+  State is Active
+    2 state changes, last state change 1y37w
+  Virtual IP address is 10.31.0.35
+  Active virtual MAC address is 0000.0c9f.fc20 (MAC In Use)
+    Local virtual MAC address is 0000.0c9f.fc20 (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 2.320 secs
+  Preemption enabled
+  Active router is local
+  Standby router is 10.31.0.34, priority 100 (expires in 10.000 sec)
+  Priority 110 (configured 110)
+  Group name is "TURNER_TOWNSEND" (cfgd)
+Port-channel3.3105 - Group 3105 (version 2)
+  State is Active
+    3 state changes, last state change 1y44w
+  Virtual IP address is 10.31.0.43
+  Active virtual MAC address is 0000.0c9f.fc21 (MAC In Use)
+    Local virtual MAC address is 0000.0c9f.fc21 (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 0.976 secs
+  Preemption enabled
+  Active router is local
+  Standby router is 10.31.0.42, priority 100 (expires in 10.384 sec)
+  Priority 110 (configured 110)
+  Group name is "PIDS" (cfgd)
+Port-channel3.3107 - Group 3107 (version 2)
+  State is Active
+    5 state changes, last state change 1y44w
+  Virtual IP address is 10.31.0.59
+  Active virtual MAC address is 0000.0c9f.fc23 (MAC In Use)
+    Local virtual MAC address is 0000.0c9f.fc23 (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 2.336 secs
+  Preemption enabled
+  Active router is local
+  Standby router is 10.31.0.58, priority 100 (expires in 7.712 sec)
+  Priority 110 (configured 110)
+  Group name is "IT_DMZ" (cfgd)
+Port-channel3.3109 - Group 3109 (version 2)
+  State is Active
+    3 state changes, last state change 1y44w
+  Virtual IP address is 10.31.0.75
+  Active virtual MAC address is 0000.0c9f.fc25 (MAC In Use)
+    Local virtual MAC address is 0000.0c9f.fc25 (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 0.016 secs
+  Preemption enabled
+  Active router is local
+  Standby router is 10.31.0.74, priority 100 (expires in 11.136 sec)
+  Priority 110 (configured 110)
+  Group name is "VBLOCK" (cfgd)
+Port-channel3.3110 - Group 3110 (version 2)
+  State is Active
+    3 state changes, last state change 1y44w
+  Virtual IP address is 10.31.0.83
+  Active virtual MAC address is 0000.0c9f.fc26 (MAC In Use)
+    Local virtual MAC address is 0000.0c9f.fc26 (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 2.112 secs
+  Preemption enabled
+  Active router is local
+  Standby router is 10.31.0.82, priority 100 (expires in 10.976 sec)
+  Priority 110 (configured 110)
+  Group name is "VBLOCK_MANAGED" (cfgd)
+Port-channel3.3111 - Group 3111 (version 2)
+  State is Standby
+    4 state changes, last state change 1y37w
+  Virtual IP address is 10.31.0.91
+  Active virtual MAC address is 0000.0c9f.fc27 (MAC Not In Use)
+    Local virtual MAC address is 0000.0c9f.fc27 (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 0.112 secs
+  Preemption enabled
+  Active router is 10.31.0.90, priority 110 (expires in 9.104 sec)
+    MAC address is 7c0e.cef3.e942
+  Standby router is local
+  Priority 110 (configured 110)
+  Group name is "VXBLOCK" (cfgd)
+Port-channel3.3114 - Group 3114 (version 2)
+  State is Active
+    3 state changes, last state change 1y44w
+  Virtual IP address is 10.31.0.115
+  Active virtual MAC address is 0000.0c9f.fc2a (MAC In Use)
+    Local virtual MAC address is 0000.0c9f.fc2a (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 1.776 secs
+  Preemption enabled
+  Active router is local
+  Standby router is 10.31.0.114, priority 100 (expires in 9.472 sec)
+  Priority 110 (configured 110)
+  Group name is "HOTSPOT_INT" (cfgd)
+Port-channel3.3120 - Group 3120 (version 2)
+  State is Init (interface down)
+  Virtual IP address is 10.31.0.163
+  Active virtual MAC address is unknown (MAC Not In Use)
+    Local virtual MAC address is 0000.0c9f.fc30 (v2 default)
+  Hello time 3 sec, hold time 10 sec
+  Preemption enabled
+  Active router is unknown
+  Standby router is unknown
+  Priority 110 (configured 110)
+  Group name is "HS_VA_APAM" (cfgd)
+Port-channel3.3125 - Group 3125 (version 2)
+  State is Active
+    3 state changes, last state change 1y44w
+  Virtual IP address is 10.31.0.203
+  Active virtual MAC address is 0000.0c9f.fc35 (MAC In Use)
+    Local virtual MAC address is 0000.0c9f.fc35 (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 2.192 secs
+  Preemption enabled
+  Active router is local
+  Standby router is 10.31.0.202, priority 100 (expires in 10.960 sec)
+  Priority 110 (configured 110)
+  Group name is "LAUNCESTON_SKIDATA" (cfgd)
+Port-channel3.3129 - Group 3129 (version 2)
+  State is Active
+    3 state changes, last state change 38w4d
+  Virtual IP address is 10.31.0.235
+  Active virtual MAC address is 0000.0c9f.fc39 (MAC In Use)
+    Local virtual MAC address is 0000.0c9f.fc39 (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 0.704 secs
+  Preemption enabled
+  Active router is local
+  Standby router is 10.31.0.234, priority 100 (expires in 10.224 sec)
+  Priority 110 (configured 110)
+  Group name is "GLOBAL_MANAGED" (cfgd)
+Port-channel3.3130 - Group 3130 (version 2)
+  State is Active
+    3 state changes, last state change 1y44w
+  Virtual IP address is 10.31.0.243
+  Active virtual MAC address is 0000.0c9f.fc3a (MAC In Use)
+    Local virtual MAC address is 0000.0c9f.fc3a (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 0.560 secs
+  Preemption enabled
+  Active router is local
+  Standby router is 10.31.0.242, priority 100 (expires in 10.944 sec)
+  Priority 110 (configured 110)
+  Group name is "SKIDATA" (cfgd)
+Port-channel3.3133 - Group 3133 (version 2)
+  State is Active
+    3 state changes, last state change 1y44w
+  Virtual IP address is 10.32.0.11
+  Active virtual MAC address is 0000.0c9f.fc3d (MAC In Use)
+    Local virtual MAC address is 0000.0c9f.fc3d (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 1.200 secs
+  Preemption enabled
+  Active router is local
+  Standby router is 10.32.0.10, priority 100 (expires in 9.888 sec)
+  Priority 110 (configured 110)
+  Group name is "SHARED_SERVICES_MANAGED" (cfgd)
+Port-channel3.3134 - Group 3134 (version 2)
+  State is Active
+    3 state changes, last state change 1y44w
+  Virtual IP address is 10.32.0.19
+  Active virtual MAC address is 0000.0c9f.fc3e (MAC In Use)
+    Local virtual MAC address is 0000.0c9f.fc3e (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 1.664 secs
+  Preemption enabled
+  Active router is local
+  Standby router is 10.32.0.18, priority 100 (expires in 9.616 sec)
+  Priority 110 (configured 110)
+  Group name is "HOSTED_SERVICES" (cfgd)
+Port-channel3.3138 - Group 3138 (version 2)
+  State is Active
+    3 state changes, last state change 1y44w
+  Virtual IP address is 10.32.0.51
+  Active virtual MAC address is 0000.0c9f.fc42 (MAC In Use)
+    Local virtual MAC address is 0000.0c9f.fc42 (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 1.728 secs
+  Preemption enabled
+  Active router is local
+  Standby router is 10.32.0.50, priority 100 (expires in 7.968 sec)
+  Priority 110 (configured 110)
+  Group name is "SHARED_SERVICES" (cfgd)
+Port-channel3.3143 - Group 3143 (version 2)
+  State is Active
+    3 state changes, last state change 1y44w
+  Virtual IP address is 10.32.0.91
+  Active virtual MAC address is 0000.0c9f.fc47 (MAC In Use)
+    Local virtual MAC address is 0000.0c9f.fc47 (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 2.576 secs
+  Preemption enabled
+  Active router is local
+  Standby router is 10.32.0.90, priority 100 (expires in 9.584 sec)
+  Priority 110 (configured 110)
+  Group name is "BILLING" (cfgd)
+Port-channel3.3144 - Group 3144 (version 2)
+  State is Active
+    3 state changes, last state change 1y44w
+  Virtual IP address is 10.32.0.99
+  Active virtual MAC address is 0000.0c9f.fc48 (MAC In Use)
+    Local virtual MAC address is 0000.0c9f.fc48 (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 2.352 secs
+  Preemption enabled
+  Active router is local
+  Standby router is 10.32.0.98, priority 100 (expires in 9.328 sec)
+  Priority 110 (configured 110)
+  Group name is "BILLING_MANAGED" (cfgd)
+Port-channel3.3145 - Group 3145 (version 2)
+  State is Active
+    3 state changes, last state change 1y44w
+  Virtual IP address is 10.32.0.107
+  Active virtual MAC address is 0000.0c9f.fc49 (MAC In Use)
+    Local virtual MAC address is 0000.0c9f.fc49 (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 1.440 secs
+  Preemption enabled
+  Active router is local
+  Standby router is 10.32.0.106, priority 100 (expires in 11.392 sec)
+  Priority 110 (configured 110)
+  Group name is "SKIDATA_TEST" (cfgd)
+Port-channel3.3146 - Group 3146 (version 2)
+  State is Active
+    2 state changes, last state change 1y37w
+  Virtual IP address is 10.32.0.115
+  Active virtual MAC address is 0000.0c9f.fc4a (MAC In Use)
+    Local virtual MAC address is 0000.0c9f.fc4a (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 0.320 secs
+  Preemption enabled
+  Active router is local
+  Standby router is 10.32.0.114, priority 100 (expires in 10.064 sec)
+  Priority 110 (configured 110)
+  Group name is "AMCAL" (cfgd)
+Port-channel3.3147 - Group 3147 (version 2)
+  State is Active
+    2 state changes, last state change 1y37w
+  Virtual IP address is 10.32.0.123
+  Active virtual MAC address is 0000.0c9f.fc4b (MAC In Use)
+    Local virtual MAC address is 0000.0c9f.fc4b (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 0.144 secs
+  Preemption enabled
+  Active router is local
+  Standby router is 10.32.0.122, priority 100 (expires in 8.832 sec)
+  Priority 110 (configured 110)
+  Group name is "GRILLD" (cfgd)
+Port-channel3.3149 - Group 3149 (version 2)
+  State is Active
+    2 state changes, last state change 1y32w
+  Virtual IP address is 10.32.0.139
+  Active virtual MAC address is 0000.0c9f.fc4d (MAC In Use)
+    Local virtual MAC address is 0000.0c9f.fc4d (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 2.256 secs
+  Preemption enabled
+  Active router is local
+  Standby router is 10.32.0.138, priority 100 (expires in 10.272 sec)
+  Priority 110 (configured 110)
+  Group name is "STOWE" (cfgd)
+Port-channel3.3150 - Group 3150 (version 2)
+  State is Active
+    7 state changes, last state change 1y44w
+  Virtual IP address is 10.32.0.147
+  Active virtual MAC address is 0000.0c9f.fc4e (MAC In Use)
+    Local virtual MAC address is 0000.0c9f.fc4e (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 1.680 secs
+  Preemption enabled
+  Active router is local
+  Standby router is 10.32.0.146, priority 100 (expires in 10.800 sec)
+  Priority 110 (configured 110)
+  Group name is "AZURE" (cfgd)
+Port-channel3.3151 - Group 3151 (version 2)
+  State is Standby
+    3 state changes, last state change 1y44w
+  Virtual IP address is 172.16.67.3
+  Active virtual MAC address is 0000.0c9f.fc4f (MAC Not In Use)
+    Local virtual MAC address is 0000.0c9f.fc4f (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 0.128 secs
+  Preemption disabled
+  Active router is 172.16.67.2, priority 100 (expires in 8.752 sec)
+    MAC address is 7c0e.cef3.e942
+  Standby router is local
+  Priority 100 (default 100)
+  Group name is "AZURE_GLOBAL" (cfgd)
+Port-channel3.3153 - Group 3153 (version 2)
+  State is Active
+    5 state changes, last state change 1y44w
+  Virtual IP address is 10.32.0.171
+  Active virtual MAC address is 0000.0c9f.fc51 (MAC In Use)
+    Local virtual MAC address is 0000.0c9f.fc51 (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 2.128 secs
+  Preemption enabled
+  Active router is local
+  Standby router is 10.32.0.170, priority 100 (expires in 11.664 sec)
+  Priority 110 (configured 110)
+  Group name is "A-CDM" (cfgd)
+Port-channel3.3154 - Group 3154 (version 2)
+  State is Active
+    2 state changes, last state change 1y42w
+  Virtual IP address is 10.32.0.179
+  Active virtual MAC address is 0000.0c9f.fc52 (MAC In Use)
+    Local virtual MAC address is 0000.0c9f.fc52 (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 1.264 secs
+  Preemption enabled
+  Active router is local
+  Standby router is 10.32.0.178, priority 100 (expires in 11.104 sec)
+  Priority 110 (configured 110)
+  Group name is "MENZIES" (cfgd)
+Port-channel3.3155 - Group 3155 (version 2)
+  State is Active
+    2 state changes, last state change 1y38w
+  Virtual IP address is 10.32.0.187
+  Active virtual MAC address is 0000.0c9f.fc53 (MAC In Use)
+    Local virtual MAC address is 0000.0c9f.fc53 (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 0.800 secs
+  Preemption enabled
+  Active router is local
+  Standby router is 10.32.0.186, priority 100 (expires in 9.968 sec)
+  Priority 110 (configured 110)
+  Group name is "AUSPRODPOS" (cfgd)
+Port-channel3.3156 - Group 3156 (version 2)
+  State is Active
+    3 state changes, last state change 1y44w
+  Virtual IP address is 10.32.0.195
+  Active virtual MAC address is 0000.0c9f.fc54 (MAC In Use)
+    Local virtual MAC address is 0000.0c9f.fc54 (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 0.112 secs
+  Preemption enabled
+  Active router is local
+  Standby router is 10.32.0.194, priority 100 (expires in 8.720 sec)
+  Priority 110 (configured 110)
+  Group name is "TI_EXNET_APAM_SITA" (cfgd)
+Port-channel3.3157 - Group 3157 (version 2)
+  State is Active
+    3 state changes, last state change 1y44w
+  Virtual IP address is 10.32.0.203
+  Active virtual MAC address is 0000.0c9f.fc55 (MAC In Use)
+    Local virtual MAC address is 0000.0c9f.fc55 (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 0.224 secs
+  Preemption enabled
+  Active router is local
+  Standby router is 10.32.0.202, priority 100 (expires in 9.440 sec)
+  Priority 110 (configured 110)
+  Group name is "TI_VA_APAM" (cfgd)
+Port-channel3.3158 - Group 3158 (version 2)
+  State is Active
+    4 state changes, last state change 1y44w
+  Virtual IP address is 10.32.0.211
+  Active virtual MAC address is 0000.0c9f.fc56 (MAC In Use)
+    Local virtual MAC address is 0000.0c9f.fc56 (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 2.240 secs
+  Preemption enabled
+  Active router is local
+  Standby router is 10.32.0.210, priority 100 (expires in 7.888 sec)
+  Priority 110 (configured 110)
+  Group name is "ISE" (cfgd)
+Port-channel3.3159 - Group 3159 (version 2)
+  State is Active
+    4 state changes, last state change 1y44w
+  Virtual IP address is 10.32.0.219
+  Active virtual MAC address is 0000.0c9f.fc57 (MAC In Use)
+    Local virtual MAC address is 0000.0c9f.fc57 (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 0.272 secs
+  Preemption enabled
+  Active router is local
+  Standby router is 10.32.0.218, priority 100 (expires in 10.656 sec)
+  Priority 110 (configured 110)
+  Group name is "hsrp-Po3.3159-3159" (default)
+Port-channel3.3160 - Group 3160 (version 2)
+  State is Active
+    6 state changes, last state change 1y44w
+  Virtual IP address is 10.32.0.227
+  Active virtual MAC address is 0000.0c9f.fc58 (MAC In Use)
+    Local virtual MAC address is 0000.0c9f.fc58 (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 1.072 secs
+  Preemption enabled
+  Active router is local
+  Standby router is 10.32.0.226, priority 100 (expires in 10.192 sec)
+  Priority 110 (configured 110)
+  Group name is "CITRIX_HOSTED_SERVICES" (cfgd)
+Port-channel3.3161 - Group 3161 (version 2)
+  State is Active
+    7 state changes, last state change 1y44w
+  Virtual IP address is 10.32.0.235
+  Active virtual MAC address is 0000.0c9f.fc59 (MAC In Use)
+    Local virtual MAC address is 0000.0c9f.fc59 (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 1.920 secs
+  Preemption enabled
+  Active router is local
+  Standby router is 10.32.0.234, priority 100 (expires in 10.800 sec)
+  Priority 110 (configured 110)
+  Group name is "HOSTED_SERVICES_TRANSIT" (cfgd)
+Port-channel3.3162 - Group 3162 (version 2)
+  State is Active
+    4 state changes, last state change 1y44w
+  Virtual IP address is 10.32.0.243
+  Active virtual MAC address is 0000.0c9f.fc5a (MAC In Use)
+    Local virtual MAC address is 0000.0c9f.fc5a (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 0.256 secs
+  Preemption enabled
+  Active router is local
+  Standby router is 10.32.0.242, priority 100 (expires in 8.528 sec)
+  Priority 110 (configured 110)
+  Group name is "BAAS_MGMT" (cfgd)
+Port-channel3.3163 - Group 3163 (version 2)
+  State is Active
+    4 state changes, last state change 1y44w
+  Virtual IP address is 10.32.0.251
+  Active virtual MAC address is 0000.0c9f.fc5b (MAC In Use)
+    Local virtual MAC address is 0000.0c9f.fc5b (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 1.904 secs
+  Preemption enabled
+  Active router is local
+  Standby router is 10.32.0.250, priority 100 (expires in 9.328 sec)
+  Priority 110 (configured 110)
+  Group name is "VERIZON" (cfgd)
+Port-channel3.3164 - Group 3164 (version 2)
+  State is Active
+    9 state changes, last state change 1y44w
+  Virtual IP address is 10.32.1.3
+  Active virtual MAC address is 0000.0c9f.fc5c (MAC In Use)
+    Local virtual MAC address is 0000.0c9f.fc5c (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 0.752 secs
+  Preemption enabled
+  Active router is local
+  Standby router is unknown
+  Priority 110 (configured 110)
+  Group name is "GLOBALPROTECT" (cfgd)
+Port-channel3.3165 - Group 3165 (version 2)
+  State is Active
+    3 state changes, last state change 1y44w
+  Virtual IP address is 10.32.1.11
+  Active virtual MAC address is 0000.0c9f.fc5d (MAC In Use)
+    Local virtual MAC address is 0000.0c9f.fc5d (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 1.808 secs
+  Preemption enabled
+  Active router is local
+  Standby router is 10.32.1.10, priority 100 (expires in 10.384 sec)
+  Priority 110 (configured 110)
+  Group name is "PANASONIC" (cfgd)
+Port-channel3.3166 - Group 3166 (version 2)
+  State is Active
+    4 state changes, last state change 1y44w
+  Virtual IP address is 10.32.1.19
+  Active virtual MAC address is 0000.0c9f.fc5e (MAC In Use)
+    Local virtual MAC address is 0000.0c9f.fc5e (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 1.392 secs
+  Preemption enabled
+  Active router is local
+  Standby router is 10.32.1.18, priority 100 (expires in 8.928 sec)
+  Priority 110 (configured 110)
+  Group name is "HUGO_BOSS" (cfgd)
+Port-channel3.3167 - Group 3167 (version 2)
+  State is Active
+    2 state changes, last state change 32w0d
+  Virtual IP address is 10.32.1.27
+  Active virtual MAC address is 0000.0c9f.fc5f (MAC In Use)
+    Local virtual MAC address is 0000.0c9f.fc5f (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 0.944 secs
+  Preemption enabled
+  Active router is local
+  Standby router is 10.32.1.26, priority 100 (expires in 9.680 sec)
+  Priority 110 (configured 110)
+  Group name is "RVR" (cfgd)
+Port-channel3.3168 - Group 3168 (version 2)
+  State is Active
+    2 state changes, last state change 27w5d
+  Virtual IP address is 10.32.1.33
+  Active virtual MAC address is 0000.0c9f.fc60 (MAC In Use)
+    Local virtual MAC address is 0000.0c9f.fc60 (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 1.296 secs
+  Preemption enabled
+  Active router is local
+  Standby router is 10.32.1.35, priority 100 (expires in 8.624 sec)
+  Priority 110 (configured 110)
+  Group name is "ORION" (cfgd)
+Port-channel3.3250 - Group 0 (version 2)
+  State is Active
+    3 state changes, last state change 1y44w
+  Virtual IP address is 172.16.64.3
+  Active virtual MAC address is 0000.0c9f.f000 (MAC In Use)
+    Local virtual MAC address is 0000.0c9f.f000 (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 0.368 secs
+  Preemption enabled
+  Active router is local
+  Standby router is 172.16.64.2, priority 100 (expires in 9.968 sec)
+  Priority 110 (configured 110)
+  Group name is "GLOBAL" (cfgd)

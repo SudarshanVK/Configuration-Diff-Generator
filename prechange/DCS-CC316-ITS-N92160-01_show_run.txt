@@ -1,0 +1,554 @@
+
+!Command: show running-config
+!Time: Mon Jul  5 13:55:11 2021
+
+version 7.0(3)I6(1)
+hostname DCS-CC316-ITS-N92160-01
+vdc DCS-CC316-ITS-N92160-01 id 1
+  limit-resource vlan minimum 16 maximum 4094
+  limit-resource vrf minimum 2 maximum 4096
+  limit-resource port-channel minimum 0 maximum 511
+  limit-resource u4route-mem minimum 248 maximum 248
+  limit-resource u6route-mem minimum 96 maximum 96
+  limit-resource m4route-mem minimum 58 maximum 58
+  limit-resource m6route-mem minimum 8 maximum 8
+
+feature tacacs+
+feature interface-vlan
+clock timezone AEST 10 0
+clock summer-time ADST 1 Sun Oct 02:00 1 Sun Apr 03:00 60
+
+username admin password 5 $1$uVp09HXR$5HAL9XYD2xDjp03k44ezQ0  role network-admin
+username sworion password 5 $1$RO4NkHuJ$BXN4B6rPNp7oLgZioQKgL.  role network-operator
+
+banner motd $UNAUTHORIZED ACCESS TO THIS NETWORK DEVICE IS PROHIBITED
+You must have explicit permission to access or configure this device.
+All activities performed on this device may be logged, and violations
+of this policy may result in disciplinary action, and may be reported to
+law enforcement. There is no right to privacy on this device.$
+
+no ip domain-lookup
+ip domain-name airport.local
+tacacs-server host 172.16.65.2 key 7 "fbNsuP3YQNYj6XBHmDxJ" 
+tacacs-server host 172.16.65.1 key 7 "fbNsuP3YQNYj6XBHmDxJ" 
+aaa group server tacacs+ tacacs+ 
+    server 172.16.65.2 
+    source-interface Vlan3250
+crypto key param rsa label PDC-CC241-ITS-SW-N92160-01 modulus 1024 
+ip access-list NET_MGMT_VTY
+  10 permit ip 172.16.0.0/16 any 
+  20 deny ip any any log 
+
+
+system vlan 1006 reserve
+
+copp profile strict
+ip ssh source-interface Vlan3250
+snmp-server user admin network-admin auth md5 0xc76072f5cb98098c99acadcddde6db81 priv 0xc76072f5cb98098c99acadcddde6db81 localizedkey
+snmp-server user sworion network-operator auth md5 0x903c021c2adfc13598ec9e1e7f9e91c4 priv aes-128 0x903c021c2adfc13598ec9e1e7f9e91c4 localizedkey
+snmp-server host 172.16.255.6 traps version 3 priv sworion
+rmon event 1 description FATAL(1) owner PMON@FATAL
+rmon event 2 description CRITICAL(2) owner PMON@CRITICAL
+rmon event 3 description ERROR(3) owner PMON@ERROR
+rmon event 4 description WARNING(4) owner PMON@WARNING
+rmon event 5 description INFORMATION(5) owner PMON@INFO
+snmp-server enable traps config ccmCLIRunningConfigChanged
+snmp-server enable traps snmp authentication
+ntp server 172.16.4.1 use-vrf default
+ntp server 172.16.4.4 use-vrf default
+ntp source-interface  Vlan3250
+aaa authentication login default group tacacs+ 
+aaa authentication login console group tacacs+ 
+aaa authorization config-commands default group tacacs+ local 
+aaa authorization commands default group tacacs+ local 
+aaa accounting default group tacacs+ 
+aaa authentication login error-enable 
+tacacs-server directed-request 
+
+vlan 1,100,3000-3048,3050-3062,3100-3103,3105-3110,3114,3116,3120,3125,3129-3130,3133-3134,3138,3143-3145,3156-3165,3250-3257,3260-3261,3299,3302-3303,3305-3306,3308,3310-3312,3321-3322,3400,3550-3557,4000
+vlan 100
+  name NET_MGMT_DMZ
+vlan 3000
+  name TRANSIT_BAYFIND_PA
+vlan 3001
+  name TRANSIT_ETIHAD
+vlan 3002
+  name TRANSIT_AMSA
+vlan 3003
+  name TRANSIT_FRAME
+vlan 3004
+  name TRANSIT_ARE
+vlan 3005
+  name TRANSIT_QATAR
+vlan 3006
+  name TRANSIT_NGFW_INFRA
+vlan 3007
+  name TRANSIT_KYOTO_MANAGED
+vlan 3008
+  name TRANSIT_VPN
+vlan 3009
+  name TRANSIT_LAUN_TRAN
+vlan 3010
+  name TRANSIT-WHSMITH
+vlan 3011
+  name TRANSIT_CHINA_SOUTHERN
+vlan 3012
+  name TRANSIT_APPLE
+vlan 3013
+  name TRANSIT_ROYAL_BRUNEI
+vlan 3014
+  name TRANSIT_SKYBUS
+vlan 3015
+  name TRANSIT_EYECORP
+vlan 3016
+  name TRANSIT_AIR_NORTH
+vlan 3017
+  name TRANSIT_VICTORIA_POLICE
+vlan 3018
+  name TRANSIT_HOTSPOT
+vlan 3019
+  name TRANSIT_ISS
+vlan 3020
+  name TRANSIT_ETIHAD_LOUNGE
+vlan 3021
+  name TRANSIT_ACG
+vlan 3022
+  name TRANSIT_REDROCK
+vlan 3023
+  name TRANSIT_INFLIGHT_LOGISTICS
+vlan 3024
+  name TRANSIT_DELAWARE_NORTH_DMZ
+vlan 3025
+  name TRANSIT_MA_INET_ONLY
+vlan 3026
+  name TRANSIT_LPR
+vlan 3027
+  name TRANSIT_BESTOF
+vlan 3028
+  name TRANSIT_SITA
+vlan 3029
+  name TRANSIT_HANNAS_CAFE
+vlan 3030
+  name TRANSIT_SKIDATA_VALET
+vlan 3031
+  name TRANSIT_FRAME_INTERNET
+vlan 3032
+  name TRANSIT_ABC
+vlan 3033
+  name TRANSIT_PA_EWIS
+vlan 3034
+  name TRANSIT_WALKER_FIRE
+vlan 3035
+  name TRANSIT_THAI
+vlan 3036
+  name TRANSIT_OZLOOK
+vlan 3037
+  name TRANSIT_SITA_INTERNET
+vlan 3038
+  name TRANSIT_TENANT_AEROCARE
+vlan 3039
+  name TRANSIT_ADE
+vlan 3040
+  name TRANSIT_BCS
+vlan 3041
+  name TRANIST_XIAMEN
+vlan 3042
+  name TRANSIT_LAUNCESTON_HOTSPOT
+vlan 3043
+  name TRANSIT_BUBERRY
+vlan 3044
+  name TRANSIT_BP
+vlan 3045
+  name TRANSIT_JAL
+vlan 3046
+  name TRANSIT_T-AEROCARE
+vlan 3047
+  name TRANSIT_MALINDO_AIR
+vlan 3048
+  name TRANSIT_ALPHA
+vlan 3050
+  name TRANSIT_MAX_MARA
+vlan 3051
+  name TRANSIT_AVINET_CUTE
+vlan 3052
+  name TRANSIT_LENDLEASE
+vlan 3053
+  name TRANSIT_VIS
+vlan 3054
+  name TRANSIT_BECA
+vlan 3055
+  name TRANSIT_TIBCO
+vlan 3056
+  name TRANSIT_AMEX
+vlan 3057
+  name TRANSIT_MEL_EMV
+vlan 3058
+  name TRANSIT_LST_EMV
+vlan 3059
+  name TRANSIT_EMV_TEST
+vlan 3060
+  name TRANSIT_JETSTAR
+vlan 3061
+  name TRANSIT_AIR_CANADA
+vlan 3062
+  name TRANSIT_PROGRAMMED
+vlan 3100
+  name LEGACY_INSIDE
+vlan 3101
+  name TRANSIT_LAUNCESTON
+vlan 3102
+  name TRANSIT_ICT_INET
+vlan 3103
+  name ADSB
+vlan 3105
+  name TRANSIT_PIDS
+vlan 3106
+  name LEGACY_DURESS
+vlan 3107
+  name LEGACY_EXT
+vlan 3108
+  name LEGACY_VRF-BHS
+vlan 3109
+  name TRANSIT_VBLOCK
+vlan 3110
+  name TRANSIT_VBLOCK_MANAGED
+vlan 3114
+  name LEGACY_HOTSPOT_INT
+vlan 3116
+  name LEGACY_PA
+vlan 3120
+  name TRANSIT_VA_APAM
+vlan 3125
+  name TRANSIT_SKIDATA_LAUNCESTON
+vlan 3129
+  name GLOBAL_MANAGED
+vlan 3130
+  name TRANSIT_SKIDATA
+vlan 3133
+  name SHARED_SERVICES_MAN
+vlan 3134
+  name TRANSIT_HOSTED_SERVICES_MANAGED
+vlan 3138
+  name SHARED_SERVICES_PRO
+vlan 3143
+  name TRANSIT_BILLING
+vlan 3144
+  name TRANSIT_BILLING_MANAGED
+vlan 3145
+  name TRANSIT_SKIDATA_TEST
+vlan 3156
+  name TRANSIT_EXNET_APAM_SITA
+vlan 3157
+  name TRANSIT_VA_APAM_ICLIENT
+vlan 3158
+  name TRANSIT_ISE
+vlan 3159
+  name TRANSIT_SPONSORED_GUEST
+vlan 3160
+  name CITRIX_TO_HSM
+vlan 3161
+  name HOSTED_SVCS_TRANSIT
+vlan 3162
+  name BAAS_MGMT
+vlan 3163
+  name VERIZON
+vlan 3164
+  name GLOBALPROTECT
+vlan 3165
+  name PANASONIC
+vlan 3250
+  name GLOBAL
+vlan 3251
+  name FWSM_FAILOVER
+vlan 3252
+  name VPN_FAILOVER
+vlan 3253
+  name TM_FILTER_HEARTBEAT
+vlan 3254
+  name NGFW_HA_CONTROL
+vlan 3255
+  name NGFW_HA_DATA
+vlan 3256
+  name DMZ_STORAGE
+vlan 3257
+  name DMZ_VMOTION
+vlan 3260
+  name NGFW_5250_HA1A
+vlan 3261
+  name NGFW_5250_HA1B
+vlan 3299
+  name ISCSI
+vlan 3302
+  name ITS_VPN_AMSA
+vlan 3303
+  name ITS_VPN_FRAME
+vlan 3305
+  name ITS_VPN_QATAR
+vlan 3306
+  name ITS_VPN_DURESS
+vlan 3308
+  name ITS_VPN_GENTRACK
+vlan 3310
+  name ITS_VPN_EYECORP
+vlan 3311
+  name ITS_HOSTED_SERVICES
+vlan 3312
+  name ITS_DMZ_TEST
+vlan 3321
+  name ITS_MOBILISE_IT
+vlan 3322
+  name ITS_VPN_ETHAN_GROUP
+vlan 3400
+  name LEGACY_L2L_VPN
+vlan 3550
+  name VPN_INSIDE
+vlan 3551
+  name ITS_BILLING
+vlan 3552
+  name DMZ_HOSTED_SERVICES
+vlan 3553
+  name DMZ_HOSTED_SERVICES_FIDS
+vlan 3554
+  name ITS_VBLOCK
+vlan 3555
+  name ITS_HOTSPOT
+vlan 3556
+  name ITS_DIRECTACCESS
+vlan 3557
+  name DMZ_SHARED_SERVICES
+vlan 4000
+  name UNUSED
+
+ip prefix-list RS_GLOBAL seq 5 permit 172.16.0.0/16 le 32 
+ip prefix-list RS_NO_GLOBAL seq 5 deny 172.16.0.0/16 le 32 
+ip prefix-list RS_NO_GLOBAL seq 10 permit 0.0.0.0/0 le 32 
+vrf context management
+hardware profile portmode 48x25G+2x100G+4x40G
+
+
+
+interface Vlan1
+
+interface Vlan3250
+  no shutdown
+  ip address 172.16.64.21/26
+
+interface port-channel1
+  description --- To SDC-CC241-ITS-N92160-01 (New ITS Other DC)
+  switchport
+  switchport mode trunk
+  switchport trunk native vlan 4000
+  switchport trunk allowed vlan 100,3000-3599
+  mtu 9216
+
+interface port-channel2
+  description --- To DCS-DHL-CC316-ITS-3560E-01 (Old ITS This DC)
+  switchport
+  switchport mode trunk
+  switchport trunk native vlan 4000
+  switchport trunk allowed vlan 100,3000-3599
+
+interface port-channel3
+  description to DCS-CC316-NGFW-5250-01
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan none
+  mtu 9216
+
+interface Ethernet1/1
+  description --- FI1 MGMT
+  switchport
+  switchport access vlan 100
+  no shutdown
+
+interface Ethernet1/2
+  description --- FI2 MGMT
+  switchport
+  switchport access vlan 100
+  no shutdown
+
+interface Ethernet1/3
+  description --- Cisco Fi1
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 100,3253,3256-3257,3311-3312,3551-3557
+  mtu 9216
+  no shutdown
+
+interface Ethernet1/4
+  description --- Cisco Fi2
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 100,3253,3256-3257,3311-3312,3551-3557
+  mtu 9216
+  no shutdown
+
+interface Ethernet1/5
+  description --- Melesxdmzar7101
+  switchport
+  switchport access vlan 3257
+  no shutdown
+
+interface Ethernet1/6
+  description --- Melesxdmzar7102
+  switchport
+  switchport access vlan 3257
+  no shutdown
+
+interface Ethernet1/7
+
+interface Ethernet1/8
+
+interface Ethernet1/9
+  description TO DCS-CC316-NGFW-5250-01 - MANAGEMENT
+  switchport
+  switchport access vlan 3250
+  no shutdown
+
+interface Ethernet1/10
+  description NGFW-5250 - ETH1/2 (HA2-B)
+  switchport
+  switchport access vlan 3260
+  no shutdown
+
+interface Ethernet1/11
+  description NGFW-5250 - HA1-A
+  switchport
+  switchport access vlan 3261
+  no shutdown
+
+interface Ethernet1/12
+
+interface Ethernet1/13
+
+interface Ethernet1/14
+
+interface Ethernet1/15
+
+interface Ethernet1/16
+
+interface Ethernet1/17
+
+interface Ethernet1/18
+
+interface Ethernet1/19
+
+interface Ethernet1/20
+
+interface Ethernet1/21
+
+interface Ethernet1/22
+
+interface Ethernet1/23
+
+interface Ethernet1/24
+
+interface Ethernet1/25
+
+interface Ethernet1/26
+
+interface Ethernet1/27
+
+interface Ethernet1/28
+
+interface Ethernet1/29
+
+interface Ethernet1/30
+
+interface Ethernet1/31
+
+interface Ethernet1/32
+
+interface Ethernet1/33
+
+interface Ethernet1/34
+
+interface Ethernet1/35
+
+interface Ethernet1/36
+
+interface Ethernet1/37
+
+interface Ethernet1/38
+
+interface Ethernet1/39
+
+interface Ethernet1/40
+
+interface Ethernet1/41
+  description to DCS-CC316-NGFW-5250-01
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan none
+  mtu 9216
+  channel-group 3
+  no shutdown
+
+interface Ethernet1/42
+  description to DCS-CC316-NGFW-5250-01
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan none
+  mtu 9216
+  channel-group 3
+  no shutdown
+
+interface Ethernet1/43
+
+interface Ethernet1/44
+
+interface Ethernet1/45
+  description --- To DCS-DHL-CC316-ITS-3560E-01 (Old ITS This DC)
+  switchport
+  switchport mode trunk
+  switchport trunk native vlan 4000
+  switchport trunk allowed vlan 100,3000-3599
+  channel-group 2
+  no shutdown
+
+interface Ethernet1/46
+  no shutdown
+
+interface Ethernet1/47
+  description to DCN-CC241-ITS-N92160-01 Eth1/47
+  switchport
+  switchport mode trunk
+  switchport trunk native vlan 4000
+  switchport trunk allowed vlan 100,3000-3599
+  mtu 9216
+  channel-group 1
+
+interface Ethernet1/48
+  description to DCN-CC241-ITS-N92160-01 Eth1/48
+  switchport
+  switchport mode trunk
+  switchport trunk native vlan 4000
+  switchport trunk allowed vlan 100,3000-3599
+  mtu 9216
+  channel-group 1
+  no shutdown
+
+interface Ethernet1/49
+
+interface Ethernet1/50
+
+interface Ethernet1/51
+
+interface Ethernet1/52
+
+interface Ethernet1/53
+
+interface Ethernet1/54
+
+interface mgmt0
+  vrf member management
+cli alias name wr copy run start
+line console
+line vty
+  access-class NET_MGMT_VTY in
+boot nxos bootflash:/nxos.7.0.3.I6.1.bin 
+ip route 0.0.0.0/0 172.16.64.3
+logging server 172.16.255.6
+logging source-interface Vlan3250
+
+

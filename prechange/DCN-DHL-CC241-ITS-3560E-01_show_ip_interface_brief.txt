@@ -1,0 +1,61 @@
+Interface              IP-Address      OK? Method Status                Protocol
+Vlan1                  unassigned      YES NVRAM  administratively down down    
+Vlan3250               172.16.64.24    YES NVRAM  up                    up      
+FastEthernet0          unassigned      YES NVRAM  administratively down down    
+GigabitEthernet0/1     unassigned      YES unset  administratively down down    
+GigabitEthernet0/2     unassigned      YES unset  administratively down down    
+GigabitEthernet0/3     unassigned      YES unset  up                    up      
+GigabitEthernet0/4     unassigned      YES unset  up                    up      
+GigabitEthernet0/5     unassigned      YES unset  up                    up      
+GigabitEthernet0/6     unassigned      YES unset  administratively down down    
+GigabitEthernet0/7     unassigned      YES unset  up                    up      
+GigabitEthernet0/8     unassigned      YES unset  up                    up      
+GigabitEthernet0/9     unassigned      YES unset  administratively down down    
+GigabitEthernet0/10    unassigned      YES unset  administratively down down    
+GigabitEthernet0/11    unassigned      YES unset  administratively down down    
+GigabitEthernet0/12    unassigned      YES unset  administratively down down    
+GigabitEthernet0/13    unassigned      YES unset  down                  down    
+GigabitEthernet0/14    unassigned      YES unset  administratively down down    
+GigabitEthernet0/15    unassigned      YES unset  administratively down down    
+GigabitEthernet0/16    unassigned      YES unset  down                  down    
+GigabitEthernet0/17    unassigned      YES unset  down                  down    
+GigabitEthernet0/18    unassigned      YES unset  down                  down    
+GigabitEthernet0/19    unassigned      YES unset  down                  down    
+GigabitEthernet0/20    unassigned      YES unset  administratively down down    
+GigabitEthernet0/21    unassigned      YES unset  administratively down down    
+GigabitEthernet0/22    unassigned      YES unset  administratively down down    
+GigabitEthernet0/23    unassigned      YES unset  administratively down down    
+GigabitEthernet0/24    unassigned      YES unset  administratively down down    
+GigabitEthernet0/25    unassigned      YES unset  administratively down down    
+GigabitEthernet0/26    unassigned      YES unset  administratively down down    
+GigabitEthernet0/27    unassigned      YES unset  administratively down down    
+GigabitEthernet0/28    unassigned      YES unset  administratively down down    
+GigabitEthernet0/29    unassigned      YES unset  administratively down down    
+GigabitEthernet0/30    unassigned      YES unset  administratively down down    
+GigabitEthernet0/31    unassigned      YES unset  administratively down down    
+GigabitEthernet0/32    unassigned      YES unset  administratively down down    
+GigabitEthernet0/33    unassigned      YES unset  administratively down down    
+GigabitEthernet0/34    unassigned      YES unset  administratively down down    
+GigabitEthernet0/35    unassigned      YES unset  administratively down down    
+GigabitEthernet0/36    unassigned      YES unset  down                  down    
+GigabitEthernet0/37    unassigned      YES unset  administratively down down    
+GigabitEthernet0/38    unassigned      YES unset  administratively down down    
+GigabitEthernet0/39    unassigned      YES unset  administratively down down    
+GigabitEthernet0/40    unassigned      YES unset  administratively down down    
+GigabitEthernet0/41    unassigned      YES unset  administratively down down    
+GigabitEthernet0/42    unassigned      YES unset  administratively down down    
+GigabitEthernet0/43    unassigned      YES unset  administratively down down    
+GigabitEthernet0/44    unassigned      YES unset  administratively down down    
+GigabitEthernet0/45    unassigned      YES unset  up                    up      
+GigabitEthernet0/46    unassigned      YES unset  up                    up      
+GigabitEthernet0/47    unassigned      YES unset  up                    up      
+GigabitEthernet0/48    unassigned      YES unset  up                    up      
+GigabitEthernet0/49    unassigned      YES unset  administratively down down    
+GigabitEthernet0/50    unassigned      YES unset  up                    up      
+GigabitEthernet0/51    unassigned      YES unset  up                    up      
+GigabitEthernet0/52    unassigned      YES unset  administratively down down    
+TenGigabitEthernet0/1  unassigned      YES unset  administratively down down    
+TenGigabitEthernet0/2  unassigned      YES unset  administratively down down    
+Port-channel1          unassigned      YES unset  up                    up      
+Port-channel3          unassigned      YES unset  up                    up      
+Port-channel10         unassigned      YES unset  down                  down    

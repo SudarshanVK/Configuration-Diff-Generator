@@ -1,0 +1,981 @@
+Building configuration...
+
+Current configuration : 17913 bytes
+!
+! Last configuration change at 06:56:13 AEST Fri May 7 2021 by ukoken_admin
+! NVRAM config last updated at 00:41:00 AEST Sun May 16 2021 by kiwicattools
+!
+version 15.0
+service nagle
+no service pad
+service timestamps debug datetime msec localtime
+service timestamps log datetime msec localtime
+service password-encryption
+service linenumber
+service sequence-numbers
+service counters max age 5
+!
+hostname DCS-DHL-CC316-ITS-3560E-01
+!
+boot-start-marker
+boot-end-marker
+!
+!
+logging buffered 1024000 informational
+!
+username admin privilege 15 secret 5 $1$NOom$ophRqTOb0Jl0sbmSMEFbR/
+aaa new-model
+!
+!
+aaa group server tacacs+ ACS
+ server name ACS2
+ server name ACS1
+!
+aaa authentication login default group tacacs+ local
+aaa authorization console
+aaa authorization exec default group tacacs+ local 
+aaa authorization commands 0 default group tacacs+ local 
+aaa authorization commands 1 default group tacacs+ local 
+aaa authorization commands 15 default group tacacs+ local 
+aaa accounting exec default start-stop group tacacs+
+aaa accounting commands 0 default start-stop group tacacs+
+aaa accounting commands 1 default start-stop group tacacs+
+aaa accounting commands 2 default start-stop group tacacs+
+aaa accounting commands 15 default start-stop group tacacs+
+!
+!
+!
+!
+!
+!
+aaa session-id common
+clock timezone AEST 10 0
+clock summer-time ADST recurring 1 Sun Oct 2:00 1 Sun Apr 3:00
+system mtu routing 1500
+!
+!
+!
+no ip domain-lookup
+ip domain-name airport.local
+vtp mode transparent
+!
+!
+!
+!
+spanning-tree mode pvst
+spanning-tree extend system-id
+no spanning-tree vlan 1-4094
+!
+!
+!
+!
+!
+!
+!
+!
+!
+vlan internal allocation policy ascending
+!
+vlan 100
+ name NET_MGMT_DMZ
+!
+vlan 3000
+ name TRANSIT_BAYFIND_PA
+!
+vlan 3001
+ name TRANSIT_ETIHAD
+!
+vlan 3002
+ name TRANSIT_AMSA
+!
+vlan 3003
+ name TRANSIT_FRAME
+!
+vlan 3004
+ name TRANSIT_ARE
+!
+vlan 3005
+ name TRANSIT_QATAR
+!
+vlan 3006
+ name TRANSIT_NGFW_INFRA
+!
+vlan 3007
+ name TRANSIT_KYOTO_MANAGED
+!
+vlan 3008
+ name TRANSIT_VPN
+!
+vlan 3009
+ name TRANSIT_LAUN_TRAN
+!
+vlan 3010
+ name TRANSIT-WHSMITH
+!
+vlan 3011
+ name TRANSIT_CHINA_SOUTHERN
+!
+vlan 3012
+ name TRANSIT_APPLE
+!
+vlan 3013
+ name TRANSIT_ROYAL_BRUNEI
+!
+vlan 3014
+ name TRANSIT_SKYBUS
+!
+vlan 3015
+ name TRANSIT_EYECORP
+!
+vlan 3016
+ name TRANSIT_AIR_NORTH
+!
+vlan 3017
+ name TRANSIT_VICTORIA_POLICE
+!
+vlan 3018
+ name TRANSIT_HOTSPOT
+!
+vlan 3019
+ name TRANSIT_ROOT_PROJECTS
+!
+vlan 3020
+ name TRANSIT_ETIHAD_LOUNGE
+!
+vlan 3021
+ name TRANSIT_ACG
+!
+vlan 3022
+ name TRANSIT_REDROCK
+!
+vlan 3023
+ name TRANSIT_INFLIGHT_LOGISTICS
+!
+vlan 3024
+ name TRANSIT_UNITED_LIFTS
+!
+vlan 3025
+ name TRANSIT_MA_INET_ONLY
+!
+vlan 3026
+ name TRANSIT_LPR
+!
+vlan 3027
+ name TRANSIT_WHEALTH
+!
+vlan 3028
+ name TRANSIT_SITA
+!
+vlan 3029
+ name TRANSIT_HANNAS_CAFE
+!
+vlan 3030
+ name TRANSIT_SKIDATA_VALET
+!
+vlan 3031
+ name TRANSIT_FRAME_INTERNET
+!
+vlan 3032
+ name TRANSIT_ABC
+!
+vlan 3033
+ name TRANSIT_PA_EWIS
+!
+vlan 3034
+ name TRANSIT_WALKER_FIRE
+!
+vlan 3035
+ name TRANSIT_THAI
+!
+vlan 3036
+ name TRANSIT_OZLOOK
+!
+vlan 3037
+ name TRANSIT_SITA_INTERNET
+!
+vlan 3038
+ name TRANSIT_TENANT_AEROCARE
+!
+vlan 3039
+ name TRANSIT_ADE
+!
+vlan 3040
+ name TRANSIT_BCS
+!
+vlan 3041
+ name TRANSIT_XIAMEN
+!
+vlan 3042
+ name TRANSIT_LAUNCESTON_HOTSPOT
+!
+vlan 3043
+ name TRANSIT_BURBERRY
+!
+vlan 3044
+ name TRANSIT_BP
+!
+vlan 3045
+ name TRANSIT_JAL
+!
+vlan 3046
+ name TRANSIT-T-AEROCARE
+!
+vlan 3047
+ name TRANSIT_MALINDO_AIR
+!
+vlan 3048
+ name ALPHA
+!
+vlan 3049
+ name TRANSIT_LWAPP_HOTSPOT
+!
+vlan 3050
+ name TRANSIT_MAX_MARA
+!
+vlan 3051
+ name TRANSIT_AVINET_CUTE
+!
+vlan 3052
+ name TRANSIT_LENDLEASE
+!
+vlan 3053
+ name VIS
+!
+vlan 3054
+ name TRANSIT_AIR_MASTER
+!
+vlan 3055
+ name TIBCO
+!
+vlan 3056
+ name AMEX
+!
+vlan 3057
+ name MEL_EMV
+!
+vlan 3058
+ name LST_EMV
+!
+vlan 3059
+ name EMV_TEST
+!
+vlan 3060
+ name JETSTAR
+!
+vlan 3061
+ name AIR_CANADA
+!
+vlan 3062
+ name PROGRAMMED
+!
+vlan 3063
+ name AIRNZ_LOUNGE
+!
+vlan 3064
+ name ETHAN
+!
+vlan 3065
+ name CYBERSEC
+!
+vlan 3066
+ name TENANT_NEW_REDROCK
+!
+vlan 3067
+ name CYBERSEC-HOSTED
+!
+vlan 3100
+ name LEGACY_INSIDE
+!
+vlan 3101
+ name TRANSIT_LAUNCESTON
+!
+vlan 3102
+ name TRANSIT_ICT_INET
+!
+vlan 3103
+ name ADSB
+!
+vlan 3104
+ name TRANSIT_TURNER_TOWNSEND
+!
+vlan 3105
+ name TRANSIT_PIDS
+!
+vlan 3106
+ name LEGACY_DURESS
+!
+vlan 3107
+ name LEGACY_EXT
+!
+vlan 3108
+ name LEGACY_VRF-BHS
+!
+vlan 3109
+ name TRANSIT_VBLOCK
+!
+vlan 3110
+ name TRANSIT_VBLOCK_MANAGED
+!
+vlan 3111
+ name TRANSIT_VXBLOCK
+!
+vlan 3114
+ name LEGACY_HOTSPOT_INT
+!
+vlan 3116
+ name LEGACY_PA
+!
+vlan 3120
+ name TRANSIT_VA_APAM
+!
+vlan 3125
+ name TRANSIT_SKIDATA_LAUNCESTON
+!
+vlan 3129
+ name GLOBAL_MANAGED
+!
+vlan 3130
+ name TRANSIT_SKIDATA
+!
+vlan 3133
+ name SHARED_SERVICES_MAN
+!
+vlan 3134
+ name TRANSIT_HOSTED_SERVICES_MANAGED
+!
+vlan 3138
+ name SHARED_SERVICES_PRO
+!
+vlan 3143
+ name TRANSIT_BILLING
+!
+vlan 3144
+ name TRANSIT_BILLING_MANAGED
+!
+vlan 3145
+ name TRANSIT_SKIDATA_TEST
+!
+vlan 3146
+ name AMCAL
+!
+vlan 3147
+ name GRILLD
+!
+vlan 3149
+ name STOWE
+!
+vlan 3150
+ name AZURE
+!
+vlan 3151
+ name AZURE_GLOBAL
+!
+vlan 3152
+ name SUPERGARDENS
+!
+vlan 3153
+ name A-CDM
+!
+vlan 3154
+ name MENZIES
+!
+vlan 3155
+ name AUSPRODPOS
+!
+vlan 3156
+ name TRANSIT_EXNET_APAM_SITA
+!
+vlan 3157
+ name TRANSIT_VA_APAM_ICLIENT
+!
+vlan 3158
+ name TRANSIT_ISE
+!
+vlan 3159
+ name TRANSIT_SPONSORED_GUEST
+!
+vlan 3160
+ name TRANSIT_CITRIX
+!
+vlan 3161
+ name HOSTED_SVCS_TRANSIT
+!
+vlan 3162
+ name BAAS_MGMT
+!
+vlan 3163
+ name VERIZON
+!
+vlan 3164
+ name GLOBALPROTECT
+!
+vlan 3165
+ name PANASONIC
+!
+vlan 3166
+ name HUGO_BOSS
+!
+vlan 3167
+ name RVR
+!
+vlan 3168
+ name ORION
+!
+vlan 3250
+ name GLOBAL
+!
+vlan 3251
+ name FWSM_FAILOVER
+!
+vlan 3252
+ name VPN_FAILOVER
+!
+vlan 3253
+ name TM_FILTER_HEARTBEAT
+!
+vlan 3254
+ name NGFW_HA_CONTROL
+!
+vlan 3255
+ name NGFW_HA_DATA
+!
+vlan 3256
+ name DMZ_VMOTION
+!
+vlan 3257
+ name DMZ_STORAGE
+!
+vlan 3299
+ name ISCSI
+!
+vlan 3302
+ name ITS_VPN_AMSA
+!
+vlan 3303
+ name ITS_VPN_FRAME
+!
+vlan 3305
+ name ITS_VPN_QATAR
+!
+vlan 3306
+ name ITS_VPN_DURESS
+!
+vlan 3308
+ name ITS_VPN_GENTRACK
+!
+vlan 3310
+ name ITS_VPN_EYECORP
+!
+vlan 3311
+ name ITS_HOSTED_SERVICES
+!
+vlan 3312
+ name ITS_DMZ_TEST
+!
+vlan 3321
+ name ITS_MOBILISE_IT
+!
+vlan 3322
+ name ITS_VPN_ETHAN_GROUP
+!
+vlan 3400
+ name LEGACY_L2L_VPN
+!
+vlan 3550
+ name VPN_INSIDE
+!
+vlan 3551
+ name ITS_BILLING
+!
+vlan 3552
+ name DMZ_HOSTED_SERVICES
+!
+vlan 3553
+ name DMZ_HOSTED_SERVICES_FIDS
+!
+vlan 3554
+ name ITS_VBLOCK
+!
+vlan 3555
+ name ITS_HOTSPOT
+!
+vlan 3556
+ name ITS_DIRECTACCESS
+!
+vlan 3557
+ name DMZ_SHARED_SERVICES
+!
+vlan 4000
+ name UNUSED
+!
+ip ssh version 2
+ip scp server enable
+!
+! 
+!
+!
+!
+!
+!
+!
+!
+!
+!
+interface Port-channel1
+ description DCN-DHL-CC241-ITS-3560E-01 Po1
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 4000
+ switchport trunk allowed vlan 3000-3599
+ switchport mode trunk
+ switchport nonegotiate
+!
+interface Port-channel3
+ description DCS-DHL-CC316-PE-ASR1001X-01 Po3
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 4000
+ switchport trunk allowed vlan 100,3000-3250
+ switchport mode trunk
+ switchport nonegotiate
+!
+interface Port-channel10
+ description DCS-DHL-CC316-NGFW-5050-01 AE2
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 4000
+ switchport trunk allowed vlan 3000-3250,3257,3310-3312,3321,3322,3550,3551
+ switchport trunk allowed vlan add 3553-3557
+ switchport mode trunk
+ switchport nonegotiate
+!
+interface FastEthernet0
+ no ip address
+ shutdown
+!
+interface GigabitEthernet0/1
+ description DCS-DHL-CC316-IPS-4240-01 G0/3
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 4000
+ switchport trunk allowed vlan 3000-3253,3256-3599
+ switchport mode trunk
+ switchport nonegotiate
+ shutdown
+!
+interface GigabitEthernet0/2
+ switchport access vlan 4000
+ switchport trunk encapsulation dot1q
+ switchport mode access
+ switchport nonegotiate
+ shutdown
+!
+interface GigabitEthernet0/3
+ description DCS-DHL-CC316-VPN-5520-01 G0/1
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 4000
+ switchport trunk allowed vlan 3300-3550
+ switchport mode trunk
+ switchport nonegotiate
+!
+interface GigabitEthernet0/4
+ description DCS-DHL-CC316-VPN-5520-01 G0/2
+ switchport access vlan 3252
+ switchport mode access
+ switchport nonegotiate
+!
+interface GigabitEthernet0/5
+ description DCS-DHL-CC316-IPS-4240-01 M0/0
+ switchport access vlan 3250
+ switchport mode access
+ switchport nonegotiate
+ shutdown
+!
+interface GigabitEthernet0/6
+ description DCS-DHL-CC316-VPN-5520-01 M0/0
+ switchport access vlan 3250
+ switchport mode access
+ switchport nonegotiate
+!
+interface GigabitEthernet0/7
+ description DCS-DHL-CC316-NGFW-5050-01 E3
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 4000
+ switchport trunk allowed vlan 3000-3250,3257,3310-3312,3321,3322,3550,3551
+ switchport trunk allowed vlan add 3553-3557
+ switchport mode trunk
+ switchport nonegotiate
+ channel-group 10 mode active
+!
+interface GigabitEthernet0/8
+ description DCS-DHL-CC316-NGFW-5050-01 E4
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 4000
+ switchport trunk allowed vlan 3000-3250,3257,3310-3312,3321,3322,3550,3551
+ switchport trunk allowed vlan add 3553-3557
+ switchport mode trunk
+ switchport nonegotiate
+ channel-group 10 mode active
+!
+interface GigabitEthernet0/9
+ description DCS-DHL-CC316-VPN-5550-01 G0/1
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 4000
+ switchport trunk allowed vlan 3300-3550
+ switchport mode trunk
+ switchport nonegotiate
+ shutdown
+!
+interface GigabitEthernet0/10
+ description DCS-DHL-CC316-VPN-5550-01 M0/0
+ switchport access vlan 3250
+ switchport mode access
+ switchport nonegotiate
+!
+interface GigabitEthernet0/11
+ switchport access vlan 4000
+ switchport mode access
+ switchport nonegotiate
+ shutdown
+!
+interface GigabitEthernet0/12
+ switchport access vlan 4000
+ switchport mode access
+ switchport nonegotiate
+ shutdown
+!
+interface GigabitEthernet0/13
+ description TEMP Port for Verizon Scanning - Optiview XG
+ switchport access vlan 3134
+ switchport mode access
+ switchport nonegotiate
+!
+interface GigabitEthernet0/14
+ switchport access vlan 4000
+ switchport mode access
+ switchport nonegotiate
+ shutdown
+!
+interface GigabitEthernet0/15
+ switchport access vlan 4000
+ switchport mode access
+ switchport nonegotiate
+ shutdown
+!
+interface GigabitEthernet0/16
+ description DMZ INNER
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 3253,3311,3551-3556
+ switchport mode trunk
+ switchport nonegotiate
+!
+interface GigabitEthernet0/17
+ description DMZ INNER
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 3253,3311,3551-3556
+ switchport mode trunk
+ switchport nonegotiate
+!
+interface GigabitEthernet0/18
+ description DMZ INNER
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 3102,3253,3311,3551-3556
+ switchport mode trunk
+ switchport nonegotiate
+!
+interface GigabitEthernet0/19
+ description DMZ INNER
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 3102,3253,3311,3551-3556
+ switchport mode trunk
+ switchport nonegotiate
+!
+interface GigabitEthernet0/20
+ switchport access vlan 4000
+ switchport mode access
+ switchport nonegotiate
+ shutdown
+!
+interface GigabitEthernet0/21
+ switchport access vlan 4000
+ switchport mode access
+ switchport nonegotiate
+ shutdown
+!
+interface GigabitEthernet0/22
+ switchport access vlan 4000
+ switchport mode access
+ switchport nonegotiate
+ shutdown
+!
+interface GigabitEthernet0/23
+ description --- DELL PS4100 ETH0
+ switchport access vlan 3299
+ switchport mode access
+ switchport nonegotiate
+ shutdown
+!
+interface GigabitEthernet0/24
+ description --- DELL PS4100 ETH1
+ switchport access vlan 3299
+ switchport mode access
+ switchport nonegotiate
+ shutdown
+!
+interface GigabitEthernet0/25
+!
+interface GigabitEthernet0/26
+!
+interface GigabitEthernet0/27
+ switchport access vlan 4000
+ switchport mode access
+ switchport nonegotiate
+ shutdown
+!
+interface GigabitEthernet0/28
+ switchport access vlan 4000
+ switchport mode access
+ switchport nonegotiate
+ shutdown
+!
+interface GigabitEthernet0/29
+ switchport access vlan 4000
+ switchport mode access
+ switchport nonegotiate
+ shutdown
+!
+interface GigabitEthernet0/30
+ switchport access vlan 4000
+ switchport mode access
+ switchport nonegotiate
+ shutdown
+!
+interface GigabitEthernet0/31
+ switchport access vlan 4000
+ switchport mode access
+ switchport nonegotiate
+ shutdown
+!
+interface GigabitEthernet0/32
+ switchport access vlan 4000
+ switchport mode access
+ switchport nonegotiate
+ shutdown
+!
+interface GigabitEthernet0/33
+ switchport access vlan 4000
+ switchport mode access
+ switchport nonegotiate
+ shutdown
+!
+interface GigabitEthernet0/34
+ switchport access vlan 4000
+ switchport mode access
+ switchport nonegotiate
+ shutdown
+!
+interface GigabitEthernet0/35
+ switchport access vlan 4000
+ switchport mode access
+ switchport nonegotiate
+ shutdown
+!
+interface GigabitEthernet0/36
+ switchport access vlan 4000
+ switchport mode access
+ switchport nonegotiate
+ shutdown
+!
+interface GigabitEthernet0/37
+ switchport access vlan 4000
+ switchport mode access
+ switchport nonegotiate
+ shutdown
+!
+interface GigabitEthernet0/38
+ switchport access vlan 4000
+ switchport mode access
+ switchport nonegotiate
+ shutdown
+!
+interface GigabitEthernet0/39
+ switchport access vlan 4000
+ switchport mode access
+ switchport nonegotiate
+ shutdown
+!
+interface GigabitEthernet0/40
+ switchport access vlan 4000
+ switchport mode access
+ switchport nonegotiate
+ shutdown
+!
+interface GigabitEthernet0/41
+ switchport access vlan 4000
+ switchport mode access
+ switchport nonegotiate
+ shutdown
+!
+interface GigabitEthernet0/42
+ switchport access vlan 4000
+ switchport mode access
+ switchport nonegotiate
+ shutdown
+!
+interface GigabitEthernet0/43
+ switchport access vlan 4000
+ switchport mode access
+ switchport nonegotiate
+ shutdown
+!
+interface GigabitEthernet0/44
+ switchport access vlan 4000
+ switchport mode access
+ switchport nonegotiate
+ shutdown
+!
+interface GigabitEthernet0/45
+ description DCS-DHL-CC316-NGFW-5050-01 MGMT
+ switchport access vlan 3250
+ switchport mode access
+ switchport nonegotiate
+!
+interface GigabitEthernet0/46
+ description DCS-DHL-CC316-NGFW-5050-01 HA1
+ switchport access vlan 3254
+ switchport mode access
+ switchport nonegotiate
+!
+interface GigabitEthernet0/47
+ description DCS-DHL-CC316-NGFW-5050-01 HA2
+ switchport access vlan 3255
+ switchport mode access
+ switchport nonegotiate
+!
+interface GigabitEthernet0/48
+ description DCS-DHL-CC316-PE-ASR1001X-01 G0/0/3
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 4000
+ switchport trunk allowed vlan 100,3000-3250
+ switchport mode trunk
+ switchport nonegotiate
+ channel-group 3 mode passive
+!
+interface GigabitEthernet0/49
+ description DCN-DHL-CC241-ITS-3560E-01 G0/50
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 4000
+ switchport trunk allowed vlan 3000-3599
+ switchport mode trunk
+ switchport nonegotiate
+ channel-group 1 mode on
+!
+interface GigabitEthernet0/50
+ description DCN-DHL-CC241-ITS-3560E-01 G0/50
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 4000
+ switchport trunk allowed vlan 3000-3599
+ switchport mode trunk
+ switchport nonegotiate
+ channel-group 1 mode on
+!
+interface GigabitEthernet0/51
+ shutdown
+!
+interface GigabitEthernet0/52
+ shutdown
+!
+interface TenGigabitEthernet0/1
+ switchport access vlan 4000
+ switchport mode access
+ switchport nonegotiate
+ shutdown
+!
+interface TenGigabitEthernet0/2
+ description --- To PDC-CC241-ITS-N92160-01
+ switchport access vlan 4000
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 4000
+ switchport trunk allowed vlan 100,3000-3599
+ switchport mode trunk
+ switchport nonegotiate
+!
+interface Vlan1
+ description UNUSED
+ no ip address
+ shutdown
+!
+interface Vlan3250
+ description GLOBAL
+ ip address 172.16.64.23 255.255.255.192
+!
+ip default-gateway 172.16.64.3
+!
+no ip http server
+no ip http secure-server
+!
+ip tacacs source-interface Vlan3250
+!
+ip access-list standard NET_MGMT_VTY
+ permit 172.16.0.0 0.0.255.255
+ deny   any log
+!
+ip sla responder
+ip access-list logging interval 5000
+ip access-list log-update threshold 1
+logging trap notifications
+logging origin-id hostname
+logging source-interface Vlan3250
+logging host 172.16.255.6
+!
+!
+snmp-server group cisconms v3 priv 
+snmp-server group SolarWinds v3 priv 
+snmp-server location Data Centre South Data Hall (CC316)
+snmp-server contact ICT Service Desk x1999
+snmp-server enable traps snmp authentication coldstart warmstart
+snmp-server enable traps transceiver all
+snmp-server enable traps cef resource-failure peer-state-change peer-fib-state-change inconsistency
+snmp-server enable traps config-copy
+snmp-server enable traps config
+snmp-server enable traps entity
+snmp-server enable traps cpu threshold
+snmp-server enable traps syslog
+snmp-server enable traps flash insertion removal
+snmp-server enable traps envmon fan shutdown supply temperature status
+snmp-server host 172.16.255.7 version 3 priv clmsuser 
+snmp-server host 172.16.255.8 version 3 priv cqpmuser 
+snmp-server host 172.16.255.9 version 3 priv cuomuser 
+snmp-server host 172.16.255.6 version 3 priv sworion 
+snmp ifmib ifindex persist
+tacacs server ACS2
+ address ipv4 172.16.65.2
+ key 7 121A033D1C083C571E120F073663002B35192E0D73
+tacacs server ACS1
+ address ipv4 172.16.65.1
+ key 7 0007152C0A583B553B1867610C4F272F200421080F
+!
+!
+!
+privilege exec level 2 logout
+privilege exec level 2 quit
+privilege exec level 2 exit
+banner login ^C
+UNAUTHORIZED ACCESS TO THIS NETWORK DEVICE IS PROHIBITED
+You must have explicit permission to access or configure this device.
+All activities performed on this device may be logged, and violations
+of this policy may result in disciplinary action, and may be reported to
+law enforcement. There is no right to privacy on this device.
+^C
+!
+line con 0
+ logging synchronous
+line vty 0 4
+ access-class NET_MGMT_VTY in
+ exec-timeout 30 0
+ logging synchronous
+ transport input ssh
+line vty 5 15
+ access-class NET_MGMT_VTY in
+ exec-timeout 30 0
+ logging synchronous
+ transport input ssh
+!
+ntp server 172.16.64.3
+end

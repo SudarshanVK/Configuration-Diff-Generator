@@ -165,7 +165,9 @@ def execute_command_write_to_file(capture_window, device_list):
             # loop through the list of commands
             for command in device["command_list"]:
                 # defines the file name - a combination of host name and command
-                filename = hostname + "_" + re.sub("\s", "_", command)
+                command_name = re.sub("\s", "_", command)
+                command_name = re.sub(":", "_", command_name)
+                filename = hostname + "_" + command_name
                 # set path of the file that will be created.
                 # depends on the capture_window paramater
                 file = os.path.join(capture_window, filename)

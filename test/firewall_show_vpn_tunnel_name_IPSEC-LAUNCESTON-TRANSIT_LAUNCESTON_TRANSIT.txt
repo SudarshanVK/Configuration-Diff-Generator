@@ -1,7 +1,0 @@
-
-TnID   Name                           Gateway              Local Proxy IP       Ptl:Port   Remote Proxy IP      Ptl:Port   Proposals                                                     
-----   ----                           -------              --------------       --------   ---------------      --------   ---------                                                     
-4      IPSEC-LAUNCESTON-TRANSIT:LAUNC IKE51-LAUNCESTON-IKE 10.255.255.4/32      0:0        172.22.22.21/32      0:0        ESP tunl [DH2][AES256][MD5] 28800-sec 0-kb                     
-
-Show IPSec tunnel config: Total 1 tunnels found.
-

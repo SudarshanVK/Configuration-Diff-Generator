@@ -8,3 +8,5 @@ netmiko_supported_devices
 #exception to *device*
 *.yaml
 !sample_device.yaml
+pre*
+post*

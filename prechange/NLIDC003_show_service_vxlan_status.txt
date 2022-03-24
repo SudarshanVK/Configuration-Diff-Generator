@@ -1,8 +1,0 @@
-Vxlan Controller Service is   : stopped
-Mac learning                  : Control plane
-VNI mapping                   : VLAN
-Resync period                 : 300 seconds
-Resync in progress            : No
-BGP EVPN Redistribution       : No
-Capability                    : VXLAN v4 overlay routing
-                                VXLAN v4 overlay indirect routing

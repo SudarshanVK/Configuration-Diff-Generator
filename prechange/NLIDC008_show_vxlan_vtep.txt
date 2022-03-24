@@ -1,2 +1,0 @@
-Remote VTEPS for Vxlan1:
-Total number of remote VTEPS:  0

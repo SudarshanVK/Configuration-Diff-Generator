@@ -1,0 +1,44 @@
+VRF: default
+Codes: C - connected, S - static, K - kernel, 
+       O - OSPF, IA - OSPF inter area, E1 - OSPF external type 1,
+       E2 - OSPF external type 2, N1 - OSPF NSSA external type 1,
+       N2 - OSPF NSSA external type2, B - BGP, B I - iBGP, B E - eBGP,
+       R - RIP, I L1 - IS-IS level 1, I L2 - IS-IS level 2,
+       O3 - OSPFv3, A B - BGP Aggregate, A O - OSPF Summary,
+       NG - Nexthop Group Static Route, V - VXLAN Control Service,
+       DH - DHCP client installed default route, M - Martian,
+       DP - Dynamic Policy Route, L - VRF Leaked
+
+Gateway of last resort:
+ S        0.0.0.0/0 [1/0] via 10.11.126.254, Management1
+
+ B E      10.11.3.0/31 [20/0] via 10.11.12.8, Ethernet51/1
+                              via 10.11.12.72, Ethernet52/1
+ B E      10.11.3.2/31 [20/0] via 10.11.12.8, Ethernet51/1
+                              via 10.11.12.72, Ethernet52/1
+ C        10.11.3.4/31 is directly connected, Vlan4093
+ B E      10.11.11.31/32 [20/0] via 10.11.12.8, Ethernet51/1
+ B E      10.11.11.32/32 [20/0] via 10.11.12.72, Ethernet52/1
+ B E      10.11.11.41/32 [20/0] via 10.11.12.8, Ethernet51/1
+                                via 10.11.12.72, Ethernet52/1
+ B E      10.11.11.42/32 [20/0] via 10.11.12.8, Ethernet51/1
+                                via 10.11.12.72, Ethernet52/1
+ B E      10.11.11.43/32 [20/0] via 10.11.12.8, Ethernet51/1
+                                via 10.11.12.72, Ethernet52/1
+ B E      10.11.11.44/32 [20/0] via 10.11.12.8, Ethernet51/1
+                                via 10.11.12.72, Ethernet52/1
+ C        10.11.11.45/32 is directly connected, Loopback0
+ B I      10.11.11.46/32 [200/0] via 10.11.3.5, Vlan4093
+ C        10.11.12.8/31 is directly connected, Ethernet51/1
+ C        10.11.12.72/31 is directly connected, Ethernet52/1
+ C        10.11.13.4/31 is directly connected, Vlan4094
+ B E      10.11.14.21/32 [20/0] via 10.11.12.8, Ethernet51/1
+                                via 10.11.12.72, Ethernet52/1
+ B E      10.11.14.22/32 [20/0] via 10.11.12.8, Ethernet51/1
+                                via 10.11.12.72, Ethernet52/1
+ C        10.11.14.23/32 is directly connected, Loopback1
+ B E      10.11.14.31/32 [20/0] via 10.11.12.8, Ethernet51/1
+                                via 10.11.12.72, Ethernet52/1
+ C        10.11.14.254/32 is directly connected, Loopback1
+ C        10.11.19.144/29 is directly connected, Vlan29
+ C        10.11.126.0/24 is directly connected, Management1

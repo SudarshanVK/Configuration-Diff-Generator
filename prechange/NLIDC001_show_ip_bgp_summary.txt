@@ -1,0 +1,7 @@
+BGP summary information for VRF default
+Router identifier 10.11.11.41, local AS number 65101
+Neighbor Status Codes: m - Under maintenance
+  Neighbor         V  AS           MsgRcvd   MsgSent  InQ OutQ  Up/Down State   PfxRcd PfxAcc
+  10.11.3.1        4  65101         828697    828699    0    0  575d10h Estab   14     14
+  10.11.12.0       4  65100         828692    828696    0    0  575d11h Estab   10     10
+  10.11.12.64      4  65100         828691    828693    0    0  575d11h Estab   10     10

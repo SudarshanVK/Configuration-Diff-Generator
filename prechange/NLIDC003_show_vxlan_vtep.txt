@@ -1,0 +1,6 @@
+
+Remote VTEPS for Vxlan1:
+10.11.14.21
+10.11.14.23
+10.11.14.24
+Total number of remote VTEPS:  3

@@ -1,0 +1,100 @@
+Rx bytes for encapsulation                           :  0
+Rx pkts for encapsulation                            :  0
+Rx high priority bytes for encapsulation             :  0
+Rx high priority pkts for encapsulation              :  0
+Rx low priority bytes for encapsulation              :  0
+Rx low priority pkts for encapsulation               :  0
+Encapped bytes                                       :  0
+Encapped packets                                     :  0
+Tx bytes after encapsulation                         :  0
+Tx pkts after encapsulation                          :  0
+Rx dot1Q Tunnel pkts for encapsulation               :  0
+Rx bytes before decapsulation                        :  0
+Rx pkts before decapsulation                         :  0
+Decapped bytes                                       :  0
+Decapped packets                                     :  0
+Pkts to ARP resolver                                 :  0
+Read error for pkts coming in for encapsulation      :  0
+Discard runt pkts ( encap side )                     :  0
+Discard vlan range ( encap side )                    :  0
+Discard vlan map ( encap side )                      :  0
+Discard mlag peer link ( encap side )                :  0
+Discard pkts due to empty flood list                 :  0
+Discard pkts due to empty bfd up flood list          :  0
+Encap send error                                     :  0
+Encap discard high priority                          :  0
+Encap discard low priority                           :  0
+Encap timeout                                        :  0
+Number of Pkts dropped by DMA socket                 :  0
+Discard runt pkts ( decap side )                     :  0
+Discard pkts not for vtep ( decap side )             :  0
+Discard bytes not for vtep ( decap side )            :  0
+Discard pkts with invalid vxlan header               :  0
+Discard vlan map ( decap side )                      :  0
+Discard VNI range ( decap side )                     :  0
+Decap timeout                                        :  0
+Decap socket error                                   :  0
+Arp send error                                       :  0
+Encap send to first vtep on flood list               :  0
+Arp request pkts received                            :  0
+Arp request pkts received from a virtual mac         :  0
+Arp request unmodified pkts sent                     :  0
+Arp request rewrite pkts sent                        :  0
+Arp request with Source MAC rewrite pkts sent        :  0
+Arp request packets that were not headend replicated :  0
+IpToMac bindings sent                                :  0
+IpToMac bindings received                            :  0
+Arp cache misses during Arp suppression              :  0
+Arp suppression not applied to ARP requests as mac for the target IP address is local :  0
+Arp cache hits during Arp suppression                :  0
+Arp reply send errors during Arp suppression         :  0
+Arp reply sent to broadcast mac during Arp suppression  :  0
+Arp reply packets that were not headend replicated due to arp relay :  0
+Arp suppression not applied as arp is dynamic and sender is my virtual MAC :  0
+Arp cache initial misses during Arp suppression      :  0
+Arp supression denied due to ACL                     :  0
+Arp suppression not applied to ARP requests as the target IP address is local :  0
+Arp suppression not applied to probe                 :  0
+Arp suppression not applied to ARP requests as the sender MAC address is unknown unicast :  0
+GRAT ARP sync messages received                      :  0
+GRAT ARP sync messages received in error             :  0
+GRAT ARP sync messages sent                          :  0
+GRAT ARP pkts from SVI suppressed                    :  0
+total dynamic ARP cache entries added                :  0
+total dynamic ARP cache entries added in error       :  0
+ND NS pkts skipped HER as target Ip matched SVI IP   :  0
+ND NS proxy errors during transmit                   :  0
+ND NS proxy neighbor remote binding misses           :  0
+ND NS proxy neighbor cache misses                    :  0
+ND NS proxy denied due to ACL                        :  0
+ND NS proxy not applied as neighbor entry is dynamic :  0
+ND NS proxy not applied as target link is local      :  0
+ND NS proxy not applied as target IP is local        :  0
+ND NS proxy not applied as sender link not in fdb    :  0
+ND NS proxy not applied as pkt is invalid            :  0
+ND NS proxy DAD frames suppressed                    :  0
+ND NS proxy neighbor advt sent                       :  0
+ND NS pkts from unspecified source                   :  0
+ND NS pkts total suppressed                          :  0
+ND NS pkts total received                            :  0
+ND NA pkts total suppressed                          :  0
+ND NA pkts total received                            :  0
+ND NA pkts invalid                                   :  0
+ND NA pkts not suppressed as source is SVI           :  0
+ND NA pkts suppressed as source is SVI               :  0
+ND RS pkts total suppressed                          :  0
+total dynamic neigbhor cache entries added           :  0
+total dynamic neighbor cache entries added in error  :  0
+Discard pkts destined to local mac address( encap side ) :  0
+Rx pkts for IPv6 encapsulation                       :  0
+Rx bytes for IPv6 encapsulation                      :  0
+Rx high priority pkts for IPv6 encapsulation         :  0
+Rx high priority bytes for IPv6 encapsulation        :  0
+Rx low priority pkts for IPv6 encapsulation          :  0
+Rx low priority bytes for IPv6 encapsulation         :  0
+local V4 vtep address not found while encapping      :  0
+local V6 vtep address not found while encapping      :  0
+remote V4 vtep address not found while encapping     :  0
+remote V6 vtep address not found while encapping     :  0
+Tx bytes after IPv6 encapsulation                    :  0
+Tx pkts after IPv6 encapsulation                     :  0

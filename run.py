@@ -80,16 +80,16 @@ def diff(w1, w2):
     print(Fore.CYAN + "\n=====> EXECUTING IN DIFF MODE <=====")
     # Check if Capture Window 1 exists, if it does not exit program
     if os.path.isdir(w1) == False:
-        print(Fore.RED + f"  ===>A '{w1}' capture does not exist.\n")
+        print(f"{Fore.RED}  ===>A '{w1}' capture does not exist.\n")
         sys.exit(2)
     # Check if Capture Window 2 exists, if it does not exit program
     if os.path.isdir(w2) == False:
-        print(Fore.RED + f"  ===>A '{w2}' capture does not exist.\n")
+        print(f"{Fore.RED}  ===>A '{w2}' capture does not exist.\n")
         sys.exit(2)
     # Check if a diff already exists between the two Capture Windows.
     # If it does exit the program
     try:
-        diff_dir = w1 + "_" + w2 + "_diff"
+        diff_dir = f"{w1}_{w2}_diff"
         os.makedirs(diff_dir)
     except OSError as e:
         print(
@@ -104,6 +104,7 @@ def diff(w1, w2):
 
 # Function to execute command on device and wite to file.
 def execute_command_write_to_file(capture_window, device_list):
+    # sourcery skip: do-not-use-bare-except, use-fstring-for-concatenation
     """
     Executes IOS commands using Netmiko.
     Writes raw output to a report file.
@@ -117,7 +118,7 @@ def execute_command_write_to_file(capture_window, device_list):
     for device in device_list:
         # defines a hostname paramater used later while computing the file name
         hostname = device["hostname"]
-        print(Fore.GREEN + "  ===> Processing Host: {} ".format(hostname))
+        print(f"{Fore.GREEN}  ===> Processing Host: {hostname} ")
         # Defines Netmiko connection parameters
         a_device = {
             "device_type": device["device_type"],
@@ -197,6 +198,7 @@ def execute_command_write_to_file(capture_window, device_list):
 
 
 def compute_diff(dir1, dir2, diff_dir):
+    # sourcery skip: simplify-len-comparison, use-named-expression
     """
     Compare text string in 'pre-change' with 'post-change' and produce
     formatted HTML table to be written to a file.
@@ -238,7 +240,7 @@ def compute_diff(dir1, dir2, diff_dir):
             # Handles reading of txt files
             with open(f"{dir1}/{file}", "r") as f1:
                 f1 = f1.readlines()
-        except:
+        except Exception:
             # Handles reading of JSON files
             with open(f"{dir1}/{file}", "r") as f1:
                 f1 = json.load(f1)
@@ -247,16 +249,19 @@ def compute_diff(dir1, dir2, diff_dir):
             # Handles reading of txt files
             with open(f"{dir2}/{file}", "r") as f2:
                 f2 = f2.readlines()
-        except:
+        except Exception:
             # Handles reading of JSON files
             with open(f"{dir2}/{file}", "r") as f2:
                 f2 = json.load(f2)
         # Defind Diff File name
-        diff_file = diff_dir + "/" + file + ".html"
+        diff_file = f"{diff_dir}/{file}.html"
         # Compute Diff and Write to file
         diff = difflib.HtmlDiff().make_file(f1, f2, f"{dir1}", f"{dir2}", context=False)
         with open(diff_file, "w") as f:
             f.writelines(diff)
+        # master_diff = difflib.ndiff(f1, f2)
+        # print(''.join(master_diff),)
+        
 
 
 cli = click.CommandCollection(sources=[execute_capture, execute_diff])

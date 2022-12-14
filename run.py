@@ -54,7 +54,7 @@ def capture(w, i):
         )
         sys.exit(2)
 
-    print(Fore.GREEN + f" ====>Capture Window Set to: {w}")
+    print(f"{Fore.GREEN} ====>Capture Window Set to: {w}")
 
     # print(Fore.YELLOW + "   ==> Enter device Credentials:")
     # username = input(Fore.YELLOW + "    => Username: ")

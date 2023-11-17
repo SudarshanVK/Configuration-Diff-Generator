@@ -9,7 +9,7 @@ import json
 
 from colorama import Fore, init
 from netmiko import ConnectHandler
-from netmiko.ssh_exception import (
+from netmiko.exceptions import (
     NetMikoTimeoutException,
     NetMikoAuthenticationException,
     SSHException,
@@ -32,7 +32,7 @@ def execute_diff():
 
 # Specify the two options that are needed to run the Capture Mode
 # option w: Defines the capture window
-# option dl: inventory file that contails the list of hosts and commands
+# option dl: inventory file that contains the list of hosts and commands
 @execute_capture.command()
 @click.option("-w", type=str, help="Enter Capture Window.", required=True)
 @click.option("-i", type=str, help="Enter inventory file.", required=True)
@@ -54,7 +54,7 @@ def capture(w, i):
         )
         sys.exit(2)
 
-    print(Fore.GREEN + f" ====>Capture Window Set to: {w}")
+    print(f"{Fore.GREEN} ====>Capture Window Set to: {w}")
 
     # print(Fore.YELLOW + "   ==> Enter device Credentials:")
     # username = input(Fore.YELLOW + "    => Username: ")
@@ -104,7 +104,6 @@ def diff(w1, w2):
 
 # Function to execute command on device and wite to file.
 def execute_command_write_to_file(capture_window, device_list):
-    # sourcery skip: do-not-use-bare-except, use-fstring-for-concatenation
     """
     Executes IOS commands using Netmiko.
     Writes raw output to a report file.
@@ -116,7 +115,7 @@ def execute_command_write_to_file(capture_window, device_list):
     """
     # loops through list of devices
     for device in device_list:
-        # defines a hostname paramater used later while computing the file name
+        # defines a hostname parameter used later while computing the file name
         hostname = device["hostname"]
         print(f"{Fore.GREEN}  ===> Processing Host: {hostname} ")
         # Defines Netmiko connection parameters
@@ -170,7 +169,7 @@ def execute_command_write_to_file(capture_window, device_list):
                 command_name = re.sub(":", "_", command_name)
                 filename = hostname + "_" + command_name
                 # set path of the file that will be created.
-                # depends on the capture_window paramater
+                # depends on the capture_window parameter
                 file = os.path.join(capture_window, filename)
                 # print (file)
                 # Execute the command on device and parse the output through
@@ -181,7 +180,7 @@ def execute_command_write_to_file(capture_window, device_list):
                     )
                     # print (output)
                     # Error executing command for cisco ios
-                    if "Incomplete command" in output or "Ambigious" in output:
+                    if "Incomplete command" in output or "Ambiguous" in output or "Invalid" in output:
                         print(
                             Fore.RED
                             + f"    => Error is executing command `{command}` "
@@ -198,7 +197,6 @@ def execute_command_write_to_file(capture_window, device_list):
 
 
 def compute_diff(dir1, dir2, diff_dir):
-    # sourcery skip: simplify-len-comparison, use-named-expression
     """
     Compare text string in 'pre-change' with 'post-change' and produce
     formatted HTML table to be written to a file.
@@ -253,7 +251,7 @@ def compute_diff(dir1, dir2, diff_dir):
             # Handles reading of JSON files
             with open(f"{dir2}/{file}", "r") as f2:
                 f2 = json.load(f2)
-        # Defind Diff File name
+        # Define Diff File name
         diff_file = f"{diff_dir}/{file}.html"
         # Compute Diff and Write to file
         diff = difflib.HtmlDiff().make_file(f1, f2, f"{dir1}", f"{dir2}", context=False)
